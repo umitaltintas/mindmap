@@ -1,313 +1,286 @@
+// src/context/MindMapContext.js
 import React, { createContext, useContext, useState, useCallback, useMemo, useEffect, useRef } from 'react';
 import Fuse from 'fuse.js';
 import mindMapData from '../mindMapData.json';
 
 const MindMapContext = createContext();
 
+// Optimize keyboard shortcuts configuration
 const SHORTCUTS = {
-  SEARCH_FOCUS: { key: 'f', ctrlKey: true },
-  COLLAPSE_ALL: { key: '[', ctrlKey: true },
-  EXPAND_ALL: { key: ']', ctrlKey: true },
-  CLEAR_SEARCH: { key: 'Escape', ctrlKey: false },
-  RESET_VIEW: { key: 'r', ctrlKey: true },
+    SEARCH_FOCUS: { key: 'k', ctrlKey: true },
+    COLLAPSE_ALL: { key: '[', ctrlKey: true },
+    EXPAND_ALL: { key: ']', ctrlKey: true },
+    CLEAR_SEARCH: { key: 'Escape', ctrlKey: false },
+    RESET_VIEW: { key: 'r', ctrlKey: true },
+    UNDO: { key: 'z', ctrlKey: true },
+    REDO: { key: 'y', ctrlKey: true },
 };
 
-// Pre-compute flattened data outside component
-const getFlattenedData = () => {
-  const flattenNodes = (node, path = [], ancestors = []) => {
-    const currentPath = [...path, node.name];
-    const flatNode = {
-      ...node,
-      path: currentPath,
-      ancestors,
-      fullPath: currentPath.join(' > '),
+// Pre-compute flattened data structure for better search performance
+const createFlattenedData = (data) => {
+    const result = [];
+    const traverse = (node, path = [], depth = 0) => {
+        const currentPath = [...path, node.name];
+        result.push({
+            id: node.id,
+            name: node.name,
+            description: node.description,
+            path: currentPath,
+            depth,
+            hasChildren: Boolean(node.children?.length)
+        });
+
+        node.children?.forEach(child => traverse(child, currentPath, depth + 1));
     };
-
-    const results = [flatNode];
-
-    if (node.children) {
-      node.children.forEach(child => {
-        results.push(...flattenNodes(child, currentPath, [...ancestors, node]));
-      });
-    }
-
-    return results;
-  };
-
-  return flattenNodes(mindMapData);
+    traverse(data);
+    return result;
 };
 
-const FLATTENED_DATA = getFlattenedData();
+const FLATTENED_DATA = createFlattenedData(mindMapData);
 
-// Pre-initialize Fuse instance
-const FUSE_INSTANCE = new Fuse(FLATTENED_DATA, {
-  keys: ['name', 'description', 'fullPath'],
-  includeMatches: true,
-  threshold: 0.3,
-  ignoreLocation: true,
-  minMatchCharLength: 2,
-  useExtendedSearch: true,
-});
+// Optimize Fuse.js configuration for better search results
+const FUSE_OPTIONS = {
+    keys: [
+        { name: 'name', weight: 0.7 },
+        { name: 'description', weight: 0.3 },
+        { name: 'path', weight: 0.2 }
+    ],
+    threshold: 0.3,
+    distance: 100,
+    minMatchCharLength: 2,
+    useExtendedSearch: true,
+    includeMatches: true,
+    ignoreLocation: true
+};
+
+const FUSE_INSTANCE = new Fuse(FLATTENED_DATA, FUSE_OPTIONS);
+
+// Maximum history states to keep
+const MAX_HISTORY_STATES = 50;
 
 export const MindMapProvider = ({ children }) => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filteredData, setFilteredData] = useState(mindMapData);
-  const [expandedNodes, setExpandedNodes] = useState(new Set());
-  const [history, setHistory] = useState([]);
-  const [historyIndex, setHistoryIndex] = useState(-1);
-  
-  // Use useRef instead of state for searchInputRef
-  const searchInputRef = useRef(null);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [filteredData, setFilteredData] = useState(mindMapData);
+    const [expandedNodes, setExpandedNodes] = useState(new Set());
+    const [history, setHistory] = useState([]);
+    const [historyIndex, setHistoryIndex] = useState(-1);
+    const searchInputRef = useRef(null);
+    const searchDebounceRef = useRef(null);
 
-  // Memoize history-dependent values
-  const canUndo = useMemo(() => historyIndex > 0, [historyIndex]);
-  const canRedo = useMemo(() => historyIndex < history.length - 1, [historyIndex, history.length]);
-
-  // Debounced search function
-  const debouncedSearch = useRef(null);
-  
-  // Memoize tree rebuilding function
-  const rebuildTree = useCallback((originalNode, matchedPaths, matchInfo = {}) => {
-    const isNodeMatched = matchedPaths.some(path => 
-      path.includes(originalNode.name)
-    );
-
-    if (!isNodeMatched && !matchInfo[originalNode.id]) {
-      return null;
-    }
-
-    if (isNodeMatched) {
-      setExpandedNodes(prev => new Set([...prev, originalNode.id]));
-    }
-
-    const newNode = { ...originalNode };
-
-    if (originalNode.children) {
-      const filteredChildren = originalNode.children
-        .map(child => rebuildTree(child, matchedPaths, matchInfo))
-        .filter(Boolean);
-
-      if (filteredChildren.length > 0) {
-        newNode.children = filteredChildren;
-      }
-    }
-
-    return newNode;
-  }, []);
-
-  // Optimized addToHistory with batch updates
-  const addToHistory = useCallback((action) => {
-    setHistory(prev => {
-      const newHistory = [...prev.slice(0, historyIndex + 1), action];
-      return newHistory.length > 50 ? newHistory.slice(-50) : newHistory;
-    });
-    setHistoryIndex(prev => prev + 1);
-  }, [historyIndex]);
-
-  // Memoized undo/redo functions
-  const undo = useCallback(() => {
-    if (canUndo) {
-      const previousState = history[historyIndex - 1];
-      setHistoryIndex(prev => prev - 1);
-      
-      if (previousState.expandedNodes) {
-        setExpandedNodes(new Set(previousState.expandedNodes));
-      }
-      if (previousState.searchTerm !== undefined) {
-        setSearchTerm(previousState.searchTerm);
-      }
-    }
-  }, [canUndo, history, historyIndex]);
-
-  const redo = useCallback(() => {
-    if (canRedo) {
-      const nextState = history[historyIndex + 1];
-      setHistoryIndex(prev => prev + 1);
-      
-      if (nextState.expandedNodes) {
-        setExpandedNodes(new Set(nextState.expandedNodes));
-      }
-      if (nextState.searchTerm !== undefined) {
-        setSearchTerm(nextState.searchTerm);
-      }
-    }
-  }, [canRedo, history, historyIndex]);
-
-  // Optimized node expansion functions
-  const collapseAll = useCallback(() => {
-    addToHistory({ expandedNodes: Array.from(expandedNodes) });
-    setExpandedNodes(new Set());
-  }, [expandedNodes, addToHistory]);
-
-  const expandAll = useCallback(() => {
-    const getAllNodeIds = (node) => {
-      let ids = [node.id];
-      if (node.children) {
-        node.children.forEach(child => {
-          ids.push(...getAllNodeIds(child));
+    // Optimize history management with batch updates
+    const addToHistory = useCallback((action) => {
+        setHistory(prev => {
+            const newHistory = [
+                ...prev.slice(0, historyIndex + 1),
+                { ...action, timestamp: Date.now() }
+            ].slice(-MAX_HISTORY_STATES);
+            return newHistory;
         });
-      }
-      return ids;
-    };
+        setHistoryIndex(prev => Math.min(prev + 1, MAX_HISTORY_STATES - 1));
+    }, [historyIndex]);
 
-    addToHistory({ expandedNodes: Array.from(expandedNodes) });
-    setExpandedNodes(new Set(getAllNodeIds(mindMapData)));
-  }, [expandedNodes, addToHistory]);
+    // Optimize tree traversal with memoization
+    const traverseTree = useCallback((node, matchedIds, parentMatched = false) => {
+        const isMatched = matchedIds.has(node.id) || parentMatched;
 
-  const toggleNode = useCallback((nodeId) => {
-    addToHistory({ expandedNodes: Array.from(expandedNodes) });
-    setExpandedNodes(prev => {
-      const next = new Set(prev);
-      next.has(nodeId) ? next.delete(nodeId) : next.add(nodeId);
-      return next;
-    });
-  }, [expandedNodes, addToHistory]);
+        if (!isMatched && !node.children?.some(child => matchedIds.has(child.id))) {
+            return null;
+        }
 
-  // Optimized search with debouncing
-  const filterData = useCallback((term) => {
-    if (debouncedSearch.current) {
-      clearTimeout(debouncedSearch.current);
-    }
+        const newNode = { ...node };
+        if (node.children) {
+            const filteredChildren = node.children
+                .map(child => traverseTree(child, matchedIds, isMatched))
+                .filter(Boolean);
 
-    debouncedSearch.current = setTimeout(() => {
-      addToHistory({ searchTerm });
-      setSearchTerm(term);
+            if (filteredChildren.length > 0) {
+                newNode.children = filteredChildren;
+            } else if (!isMatched) {
+                return null;
+            }
+        }
 
-      if (!term.trim()) {
-        setFilteredData(mindMapData);
-        return;
-      }
+        return newNode;
+    }, []);
 
-      const searchResults = FUSE_INSTANCE.search(term);
-      const matchedPaths = searchResults.map(result => result.item.path);
-      const matchInfo = Object.fromEntries(
-        searchResults.flatMap(result => 
-          result.item.ancestors.map(ancestor => [ancestor.id, true])
-        )
-      );
+    // Optimize search functionality with debouncing and memoization
+    const filterData = useCallback((term) => {
+        if (searchDebounceRef.current) {
+            clearTimeout(searchDebounceRef.current);
+        }
 
-      const filteredTree = rebuildTree(mindMapData, matchedPaths, matchInfo);
-      setFilteredData(filteredTree || { ...mindMapData, children: [] });
-    }, 150); // 150ms debounce delay
-  }, [addToHistory, rebuildTree]);
+        searchDebounceRef.current = setTimeout(() => {
+            if (!term.trim()) {
+                setFilteredData(mindMapData);
+                return;
+            }
 
-  // Optimized reset view
-  const resetView = useCallback(() => {
-    addToHistory({
-      searchTerm,
-      expandedNodes: Array.from(expandedNodes)
-    });
-    setSearchTerm('');
-    setFilteredData(mindMapData);
-    setExpandedNodes(new Set());
-  }, [searchTerm, expandedNodes, addToHistory]);
+            const searchResults = FUSE_INSTANCE.search(term);
+            const matchedIds = new Set(searchResults.map(result => result.item.id));
 
-  // Optimized keyboard shortcuts handler
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
-        if (event.key === SHORTCUTS.CLEAR_SEARCH.key && !SHORTCUTS.CLEAR_SEARCH.ctrlKey) {
-          if (event.target === searchInputRef.current) {
+            // Auto-expand parent nodes of matches
+            const expandIds = new Set();
+            searchResults.forEach(result => {
+                result.item.path.forEach((_, index) => {
+                    const ancestorId = FLATTENED_DATA[index]?.id;
+                    if (ancestorId) expandIds.add(ancestorId);
+                });
+            });
+
+            setExpandedNodes(prev => new Set([...prev, ...expandIds]));
+            const filteredTree = traverseTree(mindMapData, matchedIds);
+            setFilteredData(filteredTree || { ...mindMapData, children: [] });
+        }, 150);
+    }, [traverseTree]);
+
+    // Update this part in your MindMapContext.js
+    // Update this part in your MindMapContext.js
+    const toggleNode = useCallback((nodeId) => {
+        addToHistory({
+            type: 'TOGGLE_NODE',
+            nodeId,
+            expandedNodes: Array.from(expandedNodes)
+        });
+
+        setExpandedNodes(prev => {
+            const next = new Set(prev);
+            if (next.has(nodeId)) {
+                // When collapsing, only remove the clicked node
+                next.delete(nodeId);
+            } else {
+                // When expanding, just add the clicked node
+                next.add(nodeId);
+            }
+            return next;
+        });
+    }, [expandedNodes, addToHistory]);
+
+    // Memoized context value
+    const contextValue = useMemo(() => ({
+        searchTerm,
+        setSearchTerm,
+        filteredData,
+        filterData,
+        expandedNodes,
+        toggleNode,
+        searchInputRef,
+        // Additional utility functions...
+        canUndo: historyIndex > 0,
+        canRedo: historyIndex < history.length - 1,
+        undo: () => {
+            if (historyIndex > 0) {
+                const previousState = history[historyIndex - 1];
+                setHistoryIndex(prev => prev - 1);
+                setExpandedNodes(new Set(previousState.expandedNodes));
+                if (previousState.searchTerm !== undefined) {
+                    setSearchTerm(previousState.searchTerm);
+                    filterData(previousState.searchTerm);
+                }
+            }
+        },
+        redo: () => {
+            if (historyIndex < history.length - 1) {
+                const nextState = history[historyIndex + 1];
+                setHistoryIndex(prev => prev + 1);
+                setExpandedNodes(new Set(nextState.expandedNodes));
+                if (nextState.searchTerm !== undefined) {
+                    setSearchTerm(nextState.searchTerm);
+                    filterData(nextState.searchTerm);
+                }
+            }
+        },
+        collapseAll: () => {
+            addToHistory({ type: 'COLLAPSE_ALL', expandedNodes: Array.from(expandedNodes) });
+            setExpandedNodes(new Set());
+        },
+        expandAll: () => {
+            addToHistory({ type: 'EXPAND_ALL', expandedNodes: Array.from(expandedNodes) });
+            const allIds = new Set(FLATTENED_DATA.map(node => node.id));
+            setExpandedNodes(allIds);
+        },
+        resetView: () => {
+            addToHistory({
+                type: 'RESET_VIEW',
+                searchTerm,
+                expandedNodes: Array.from(expandedNodes)
+            });
             setSearchTerm('');
-            filterData('');
-          }
+            setFilteredData(mindMapData);
+            setExpandedNodes(new Set());
         }
-        return;
-      }
+    }), [
+        searchTerm,
+        filteredData,
+        expandedNodes,
+        toggleNode,
+        filterData,
+        historyIndex,
+        history,
+        addToHistory
+    ]);
 
-      if (event.ctrlKey) {
-        switch (event.key) {
-          case SHORTCUTS.SEARCH_FOCUS.key:
-            event.preventDefault();
-            searchInputRef.current?.focus();
-            break;
-          case SHORTCUTS.COLLAPSE_ALL.key:
-            event.preventDefault();
-            collapseAll();
-            break;
-          case SHORTCUTS.EXPAND_ALL.key:
-            event.preventDefault();
-            expandAll();
-            break;
-          case SHORTCUTS.RESET_VIEW.key:
-            event.preventDefault();
-            resetView();
-            break;
-          default:
-            break;
-        }
-      }
-    };
+    // Set up keyboard shortcuts
+    useEffect(() => {
+        const handleKeyDown = (event) => {
+            // Skip if we're in an input field (except for Escape)
+            if (event.target.tagName === 'INPUT' && event.key !== 'Escape') {
+                return;
+            }
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [collapseAll, expandAll, resetView, filterData]);
+            const shortcut = Object.entries(SHORTCUTS).find(([_, config]) =>
+                event.key === config.key && event.ctrlKey === config.ctrlKey
+            );
 
-  // Memoized context value
-  const value = useMemo(() => ({
-    searchTerm,
-    setSearchTerm,
-    filteredData,
-    filterData,
-    expandedNodes,
-    setExpandedNodes,
-    collapseAll,
-    expandAll,
-    resetView,
-    toggleNode,
-    undo,
-    redo,
-    exportData: () => {
-      const dataStr = JSON.stringify(mindMapData, null, 2);
-      const dataBlob = new Blob([dataStr], { type: 'application/json' });
-      const url = URL.createObjectURL(dataBlob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = 'mindmap-export.json';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url);
-    },
-    importData: (jsonData) => {
-      try {
-        const newData = JSON.parse(jsonData);
-        setFilteredData(newData);
-        setExpandedNodes(new Set());
-        addToHistory({ importedData: true });
-      } catch (error) {
-        console.error('Error importing data:', error);
-      }
-    },
-    searchInputRef,
-    canUndo,
-    canRedo,
-  }), [
-    searchTerm,
-    filteredData,
-    expandedNodes,
-    collapseAll,
-    expandAll,
-    resetView,
-    toggleNode,
-    undo,
-    redo,
-    addToHistory,
-    canUndo,
-    canRedo
-  ]);
+            if (shortcut) {
+                event.preventDefault();
+                const [action] = shortcut;
 
-  return (
-    <MindMapContext.Provider value={value}>
-      {children}
-    </MindMapContext.Provider>
-  );
+                switch (action) {
+                    case 'SEARCH_FOCUS':
+                        searchInputRef.current?.focus();
+                        break;
+                    case 'COLLAPSE_ALL':
+                        contextValue.collapseAll();
+                        break;
+                    case 'EXPAND_ALL':
+                        contextValue.expandAll();
+                        break;
+                    case 'CLEAR_SEARCH':
+                        if (searchTerm) {
+                            setSearchTerm('');
+                            filterData('');
+                        }
+                        break;
+                    case 'RESET_VIEW':
+                        contextValue.resetView();
+                        break;
+                    case 'UNDO':
+                        contextValue.undo();
+                        break;
+                    case 'REDO':
+                        contextValue.redo();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [contextValue, searchTerm, filterData]);
+
+    return (
+        <MindMapContext.Provider value={contextValue}>
+            {children}
+        </MindMapContext.Provider>
+    );
 };
 
 export const useMindMap = () => {
-  const context = useContext(MindMapContext);
-  if (!context) {
-    throw new Error('useMindMap must be used within a MindMapProvider');
-  }
-  return context;
+    const context = useContext(MindMapContext);
+    if (!context) {
+        throw new Error('useMindMap must be used within a MindMapProvider');
+    }
+    return context;
 };

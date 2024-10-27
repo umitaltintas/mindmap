@@ -6,36 +6,62 @@ import { useMindMap } from '../context/MindMapContext';
 
 const MindMapControls = () => {
   const { isDarkMode, toggleDarkMode } = useTheme();
-  const { collapseAll, expandAll, resetView } = useMindMap();
+  const { 
+    collapseAll, 
+    expandAll, 
+    resetView,
+    expandedNodes, // Add this to track state
+  } = useMindMap();
+
+  const handleCollapseAll = (e) => {
+    e.stopPropagation();
+    collapseAll();
+  };
+
+  const handleExpandAll = (e) => {
+    e.stopPropagation();
+    expandAll();
+  };
+
+  const handleResetView = (e) => {
+    e.stopPropagation();
+    resetView();
+  };
 
   return (
     <div className="flex items-center space-x-2">
       <button
-        onClick={collapseAll}
+        onClick={handleCollapseAll}
         className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 
                    hover:bg-gray-200 dark:hover:bg-gray-600
-                   transition-colors duration-200 flex items-center"
+                   transition-colors duration-200 flex items-center
+                   focus:outline-none focus:ring-2 focus:ring-blue-500"
         title="Tümünü Daralt"
+        aria-label="Collapse All"
       >
         <ChevronDown className="w-5 h-5 text-gray-600 dark:text-gray-300" />
       </button>
 
       <button
-        onClick={expandAll}
+        onClick={handleExpandAll}
         className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 
                    hover:bg-gray-200 dark:hover:bg-gray-600
-                   transition-colors duration-200 flex items-center"
+                   transition-colors duration-200 flex items-center
+                   focus:outline-none focus:ring-2 focus:ring-blue-500"
         title="Tümünü Genişlet"
+        aria-label="Expand All"
       >
         <ChevronRight className="w-5 h-5 text-gray-600 dark:text-gray-300" />
       </button>
 
       <button
-        onClick={resetView}
+        onClick={handleResetView}
         className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 
                    hover:bg-gray-200 dark:hover:bg-gray-600
-                   transition-colors duration-200 flex items-center"
+                   transition-colors duration-200 flex items-center
+                   focus:outline-none focus:ring-2 focus:ring-blue-500"
         title="Görünümü Sıfırla"
+        aria-label="Reset View"
       >
         <RefreshCcw className="w-5 h-5 text-gray-600 dark:text-gray-300" />
       </button>
@@ -44,8 +70,10 @@ const MindMapControls = () => {
         onClick={toggleDarkMode}
         className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 
                    hover:bg-gray-200 dark:hover:bg-gray-600
-                   transition-colors duration-200"
+                   transition-colors duration-200
+                   focus:outline-none focus:ring-2 focus:ring-blue-500"
         title={isDarkMode ? "Açık Mod" : "Koyu Mod"}
+        aria-label={isDarkMode ? "Light Mode" : "Dark Mode"}
       >
         {isDarkMode ? (
           <Sun className="w-5 h-5 text-yellow-400" />
