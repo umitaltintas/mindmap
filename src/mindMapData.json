@@ -1,0 +1,573 @@
+{
+    "name": "Makroekonomi",
+    "description": "Makroekonomi, bir ekonominin genel yapısını, toplam ekonomik faaliyetlerini ve geniş ölçekteki ekonomik göstergeleri inceleyen iktisat dalıdır. Bireylerin, firmaların ve hükümetin toplam ekonomik davranışlarını analiz eder. Makroekonomi, ekonomik büyüme, işsizlik, enflasyon, para ve maliye politikaları gibi konulara odaklanır.",
+    "children": [
+      {
+        "name": "Temel Göstergeler",
+        "description": "Ekonominin sağlığını ve performansını ölçmek için kullanılan ana göstergelerdir. Bu göstergeler, ekonomik analiz ve politika oluşturma süreçlerinde kritik rol oynar.",
+        "children": [
+          {
+            "name": "GSYH (Gayri Safi Yurtiçi Hasıla)",
+            "description": "Bir ülkenin belli bir dönemde ürettiği nihai mal ve hizmetlerin toplam değeridir. Ekonomik büyümenin temel göstergesidir.",
+            "children": [
+              {
+                "name": "Nominal GSYH",
+                "description": "Mevcut piyasa fiyatları üzerinden hesaplanan GSYH'dir. Enflasyon etkisini içerir."
+              },
+              {
+                "name": "Reel GSYH",
+                "description": "Fiyat değişikliklerini hesaba katarak, sabit fiyatlarla hesaplanan GSYH'dir. Ekonomik büyümeyi daha doğru yansıtır."
+              },
+              {
+                "name": "GSYH'nin Sektörel Dağılımı",
+                "description": "GSYH'nın tarım, sanayi ve hizmetler gibi farklı sektörlerde nasıl dağıldığını gösterir."
+              },
+              {
+                "name": "GSYH Deflatörü",
+                "description": "Nominal GSYH ile reel GSYH arasındaki fiyat seviyesindeki değişimi ölçen bir endekstir."
+              }
+            ]
+          },
+          {
+            "name": "Enflasyon",
+            "description": "Fiyat genel düzeyindeki sürekli artışı ifade eder. Ekonomide paranın satın alma gücünün azalmasına yol açar.",
+            "children": [
+              {
+                "name": "Talep Enflasyonu",
+                "description": "Toplam talebin toplam arzı aştığı durumlarda ortaya çıkar. Tüketim, yatırım gibi harcamaların artması sonucu fiyatlar yükselir."
+              },
+              {
+                "name": "Maliyet Enflasyonu",
+                "description": "Üretim maliyetlerindeki artışın (işçilik, hammadde) fiyatlara yansıması sonucu oluşur."
+              },
+              {
+                "name": "Yapısal Enflasyon",
+                "description": "Ekonominin yapısal değişikliklerinden kaynaklanan fiyat artışlarıdır. Sektörler arası dengesizlikler buna örnektir."
+              },
+              {
+                "name": "Beklenen Enflasyon",
+                "description": "Gelecekteki enflasyon oranlarının ekonomik aktörler tarafından öngörülmesi ve buna göre davranılması."
+              },
+              {
+                "name": "Çekirdek Enflasyon",
+                "description": "Gıda ve enerji gibi volatil kalemler hariç tutulduğunda kalan enflasyon oranıdır."
+              }
+            ]
+          },
+          {
+            "name": "İşsizlik",
+            "description": "Ekonomide iş arayan ancak iş bulamayan bireylerin oranıdır. İşsizlik oranı, ekonomik sağlık ve iş piyasası dinamiklerini yansıtır.",
+            "children": [
+              {
+                "name": "Yapısal İşsizlik",
+                "description": "Ekonominin yapısal değişiklikleri sonucu ortaya çıkan işsizliktir. Beceriler ile iş piyasası ihtiyaçları arasındaki uyumsuzluktan kaynaklanır."
+              },
+              {
+                "name": "Döngüsel İşsizlik",
+                "description": "Ekonomik dalgalanmalar (resesyon) sırasında iş gücünün talep azalmasından dolayı ortaya çıkan işsizliktir."
+              },
+              {
+                "name": "Friksiyonel İşsizlik",
+                "description": "İş değiştirme veya yeni iş arama sürecinde oluşan geçici işsizliktir."
+              },
+              {
+                "name": "Mevsimsel İşsizlik",
+                "description": "Belirli mevsimlerde ortaya çıkan işsizlik türüdür. Örneğin tarım, turizm gibi sektörlerde görülebilir."
+              },
+              {
+                "name": "Uzun Süreli İşsizlik",
+                "description": "İşsizliğin uzun süre devam etmesi durumunda ortaya çıkan sorunlardır. Genellikle beceri kaybı ve motivasyon eksikliği ile ilişkilidir."
+              }
+            ]
+          },
+          {
+            "name": "Cari Denge",
+            "description": "Bir ülkenin mal ve hizmet ihracatı ile ithalatı arasındaki farkı ifade eder. Pozitif cari denge ihracat fazlasını, negatif cari denge ithalat fazlasını gösterir.",
+            "children": [
+              {
+                "name": "Ticaret Dengesi",
+                "description": "Mal ve hizmet ticaretinden doğan cari denge kalemidir. İhracat ve ithalat arasındaki farkı içerir."
+              },
+              {
+                "name": "Gelir Dengesi",
+                "description": "Yurtiçi gelirlerin yurtdışından gelen gelirlerle olan dengesini ifade eder."
+              },
+              {
+                "name": "Transfer Dengesi",
+                "description": "Bir ülkeden diğerine yapılan tek taraflı transferleri kapsar. Yardımlar, emeklilik ödemeleri gibi kalemler içerir."
+              }
+            ]
+          },
+          {
+            "name": "Bütçe Dengesi",
+            "description": "Hükümetin gelirleri ile harcamaları arasındaki dengeyi ifade eder. Fazla bütçe, gelirlerin harcamaları aştığı durumları; bütçe açığı, harcamaların gelirleri aştığı durumları gösterir.",
+            "children": [
+              {
+                "name": "Fiskal Denge",
+                "description": "Hükümetin toplam gelirlerinin toplam harcamalarına eşit olduğu durumdur."
+              },
+              {
+                "name": "Bütçe Açığı",
+                "description": "Hükümetin harcamalarının gelirlerini aştığı durumdur. Genellikle borçlanma ile finanse edilir."
+              },
+              {
+                "name": "Bütçe Fazlası",
+                "description": "Hükümetin gelirlerinin harcamalarını aştığı durumdur. Borç ödemede veya tasarruflarda kullanılabilir."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ekonomi Politikaları",
+        "description": "Ekonomiyi yönlendirmek ve istikrarı sağlamak için hükümetlerin uyguladığı stratejilerdir. Para politikası, maliye politikası, ticaret politikası ve yapısal politikalar gibi alanları kapsar.",
+        "children": [
+          {
+            "name": "Para Politikası",
+            "description": "Merkez bankası tarafından yürütülen, para arzını ve faiz oranlarını kontrol ederek ekonomik istikrarı sağlamayı amaçlayan politikadır.",
+            "children": [
+              {
+                "name": "Faiz Oranları",
+                "description": "Para politikasının ana araçlarından biridir. Faiz oranlarının değiştirilmesi, tüketim ve yatırım kararlarını etkiler."
+              },
+              {
+                "name": "Para Arzı",
+                "description": "Ekonomide dolaşımdaki para miktarını ifade eder. Artırılması veya azaltılması ekonomik aktiviteyi etkiler."
+              },
+              {
+                "name": "Zorunlu Karşılıklar",
+                "description": "Bankaların merkez bankasında tutmaları gereken rezerv oranlarıdır. Para arzını kontrol etmek için kullanılır."
+              },
+              {
+                "name": "Açık Piyasa İşlemleri",
+                "description": "Merkez bankasının menkul kıymet alım ve satımı yoluyla para arzını düzenlediği işlemlerdir."
+              },
+              {
+                "name": "İletişim Politikası",
+                "description": "Merkez bankasının ekonomiye yönelik beklentileri yönlendirmek amacıyla kullandığı iletişim stratejileridir."
+              }
+            ]
+          },
+          {
+            "name": "Maliye Politikası",
+            "description": "Hükümetin bütçe harcamaları ve vergiler aracılığıyla ekonomik aktiviteyi düzenlemesini ifade eder.",
+            "children": [
+              {
+                "name": "Kamu Harcamaları",
+                "description": "Hükümetin altyapı, eğitim, sağlık gibi alanlara yaptığı harcamalardır. Ekonomiyi canlandırmada kullanılır."
+              },
+              {
+                "name": "Vergiler",
+                "description": "Hükümetin gelir elde etmek için vatandaşlardan ve firmalardan aldığı zorunlu ödemelerdir. Tüketim ve yatırım kararlarını etkiler."
+              },
+              {
+                "name": "Transfer Ödemeleri",
+                "description": "Hükümetin sosyal yardımlar, emeklilik ödemeleri gibi doğrudan bireylere yaptığı ödemelerdir."
+              },
+              {
+                "name": "Bütçe Disiplini",
+                "description": "Hükümetin maliye politikasını sürdürülebilir kılmak için uyguladığı bütçe yönetim stratejileridir."
+              },
+              {
+                "name": "Vergi Politikası",
+                "description": "Gelir dağılımını düzenlemek ve ekonomik etkinliği artırmak amacıyla uygulanan vergi oranları ve yapılarıdır."
+              }
+            ]
+          },
+          {
+            "name": "Ticaret Politikası",
+            "description": "Ülkeler arasındaki ticaret ilişkilerini düzenleyen politikaları ifade eder. Gümrük tarifeleri, ithalat kotaları ve serbest ticaret anlaşmaları gibi araçları içerir.",
+            "children": [
+              {
+                "name": "Gümrük Tarifeleri",
+                "description": "İthal edilen mal ve hizmetlere uygulanan vergilerdir. Koruma veya gelir elde etme amacı taşır."
+              },
+              {
+                "name": "İthalat Kotaları",
+                "description": "Belirli mal ve hizmetlerin ithalat miktarını sınırlayan politikadır. Yerli üretimi korumak için kullanılır."
+              },
+              {
+                "name": "Serbest Ticaret Anlaşmaları",
+                "description": "İki veya daha fazla ülke arasında ticaret engellerini kaldırmayı amaçlayan anlaşmalardır. Ticaret hacmini artırır."
+              },
+              {
+                "name": "İhracat Teşvikleri",
+                "description": "Ülke dışına mal ve hizmet satımını artırmak için sağlanan vergi indirimleri, sübvansiyonlar ve kredilerdir."
+              },
+              {
+                "name": "Dış Ticaret Dengeleme",
+                "description": "İthalat ve ihracat arasındaki dengeyi sağlamak için uygulanan politikaları kapsar."
+              }
+            ]
+          },
+          {
+            "name": "Yapısal Politikalar",
+            "description": "Ekonominin uzun vadeli verimliliğini ve rekabetçiliğini artırmak amacıyla uygulanan politikaları ifade eder. Eğitim, teknoloji, iş gücü piyasası reformları gibi alanları kapsar.",
+            "children": [
+              {
+                "name": "Eğitim Politikaları",
+                "description": "İşgücünün beceri seviyesini artırmak için uygulanan eğitim ve öğretim stratejileridir."
+              },
+              {
+                "name": "Teknoloji ve Ar-Ge Politikaları",
+                "description": "Araştırma ve geliştirmeyi teşvik ederek teknolojik ilerlemeyi destekleyen politikalardır."
+              },
+              {
+                "name": "İş Gücü Piyasası Reformları",
+                "description": "İş piyasasının esnekliğini artırmak ve istihdamı kolaylaştırmak için yapılan düzenlemelerdir."
+              },
+              {
+                "name": "Altyapı Yatırımları",
+                "description": "Ulaşım, enerji ve iletişim gibi temel altyapı alanlarına yapılan yatırımlardır."
+              },
+              {
+                "name": "Regülasyon Politikaları",
+                "description": "Piyasa düzenlemeleri ve denetim mekanizmaları ile ekonomik faaliyetlerin yönlendirilmesini sağlar."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Toplam Talep ve Arz",
+        "description": "Ekonomideki toplam talep ve toplam arzın dengesi, fiyat düzeyi ve üretim miktarını belirler. Bu denge, ekonomik büyüme ve istikrar için kritiktir.",
+        "children": [
+          {
+            "name": "Toplam Talep Bileşenleri",
+            "description": "Ekonomideki toplam talebi oluşturan unsurlardır.",
+            "children": [
+              {
+                "name": "Tüketim",
+                "description": "Hanehalklarının mal ve hizmetlere harcadığı toplam harcamadır. Ekonominin en büyük bileşenidir."
+              },
+              {
+                "name": "Yatırım",
+                "description": "Firmaların üretim kapasitesini artırmak için yaptığı harcamalardır. İnşaat, makineler ve teknoloji yatırımlarını içerir."
+              },
+              {
+                "name": "Kamu Harcamaları",
+                "description": "Devletin mal ve hizmet alımlarıdır. Altyapı, eğitim ve sağlık gibi kamu hizmetlerine yapılan harcamaları kapsar."
+              },
+              {
+                "name": "Net İhracat",
+                "description": "İhracattan ithalatın çıkarılmasıyla bulunan değerdir. Bir ülkenin dış ticaret performansını gösterir."
+              },
+              {
+                "name": "Tüketici Güveni",
+                "description": "Tüketicilerin ekonomik geleceğe yönelik beklentileri ve harcama eğilimlerini yansıtan göstergedir."
+              },
+              {
+                "name": "İş Yatırımcı Güveni",
+                "description": "İşletmelerin geleceğe yönelik yatırım kararlarını etkileyen güven düzeyidir."
+              }
+            ]
+          },
+          {
+            "name": "Toplam Arz",
+            "description": "Ekonomideki toplam üretim kapasitesini ifade eder. Fiyat düzeyi ve üretim miktarı üzerinde etkisi vardır.",
+            "children": [
+              {
+                "name": "Kısa Dönem Arz",
+                "description": "Fiyat düzeyindeki değişikliklerin üretim miktarını etkilediği dönemi ifade eder. Esneklik daha yüksektir."
+              },
+              {
+                "name": "Uzun Dönem Arz",
+                "description": "Ekonominin üretim kapasitesinin tam istihdam seviyesine ulaştığı dönemi ifade eder. Esneklik düşüktür."
+              },
+              {
+                "name": "Doğal Üretim Seviyesi",
+                "description": "Ekonominin uzun vadede sürdürebileceği maksimum üretim kapasitesidir."
+              },
+              {
+                "name": "Potansiyel GSYH",
+                "description": "Ekonominin kaynaklarını tam ve verimli kullanarak ulaşabileceği üretim seviyesidir."
+              },
+              {
+                "name": "Teknolojik İlerleme",
+                "description": "Üretim süreçlerindeki yenilikler ve verimlilik artışları, toplam arzı artırır."
+              },
+              {
+                "name": "İşgücü Verimliliği",
+                "description": "Birim işgücü başına üretilen mal ve hizmet miktarını ifade eder. Artışı toplam arzı yükseltir."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Uluslararası Ekonomi",
+        "description": "Ülkeler arası ticaret ve finans ilişkilerini inceleyen iktisat dalıdır. Dış ticaret, döviz piyasaları, küresel finans ve uluslararası ticaret politikalarını kapsar.",
+        "children": [
+          {
+            "name": "Döviz Kurları",
+            "description": "Farklı ülkelerin para birimlerinin birbirine karşı değerini ifade eder. Döviz kurları, uluslararası ticaret ve yatırım üzerinde önemli etkiye sahiptir.",
+            "children": [
+              {
+                "name": "Sabit Döviz Kurları",
+                "description": "Bir para biriminin başka bir para birimine sabit bir oranda bağlı olduğu sistemdir."
+              },
+              {
+                "name": "Esnek Döviz Kurları",
+                "description": "Piyasa koşullarına göre döviz kurlarının serbestçe belirlendiği sistemdir."
+              },
+              {
+                "name": "Döviz Kuru Regime Türleri",
+                "description": "Sabit, esnek ve yönetilen dalgalı döviz kuru sistemlerini içerir."
+              },
+              {
+                "name": "Döviz Rezervleri",
+                "description": "Bir ülkenin merkez bankasında tutulan yabancı para birimleri ve altın rezervleridir."
+              },
+              {
+                "name": "Döviz Kuru Politikaları",
+                "description": "Merkez bankalarının döviz kurlarını etkilemek için kullandığı araçlar ve stratejilerdir."
+              }
+            ]
+          },
+          {
+            "name": "Ödemeler Dengesi",
+            "description": "Bir ülkenin diğer ülkelerle yaptığı tüm ekonomik işlemlerin kaydını tutar. Cari işlemler, sermaye hesabı ve finans hesabını içerir.",
+            "children": [
+              {
+                "name": "Cari İşlemler",
+                "description": "Mal ve hizmet ticareti, gelir transferleri gibi cari hesap kalemlerini içerir."
+              },
+              {
+                "name": "Sermaye Hesabı",
+                "description": "Yabancı yatırımlar, portföy yatırımları gibi sermaye hareketlerini kapsar."
+              },
+              {
+                "name": "Finans Hesabı",
+                "description": "Finansal varlık ve borçların uluslararası transferlerini içerir."
+              },
+              {
+                "name": "İlk Transferler",
+                "description": "Tek taraflı ve geri alınamaz transferleri kapsar. Yardımlar ve bağışlar bu kapsama girer."
+              },
+              {
+                "name": "Portföy Yatırımları",
+                "description": "Hisse senetleri, tahviller ve diğer finansal araçlara yapılan yatırımları ifade eder."
+              }
+            ]
+          },
+          {
+            "name": "Küresel Ticaret",
+            "description": "Ülkeler arasındaki mal ve hizmet ticaretini ifade eder. Küresel ticaret, ekonomik büyüme, istihdam ve teknoloji transferi üzerinde önemli etkilere sahiptir.",
+            "children": [
+              {
+                "name": "Serbest Ticaret Bölgesi",
+                "description": "Üye ülkeler arasında ticaretin serbest olduğu ve tarifelerin kaldırıldığı bölgelerdir."
+              },
+              {
+                "name": "Gümrük Birliği",
+                "description": "Üye ülkeler arasında serbest ticaretin yanı sıra ortak gümrük tarifeleri uygulanan bir bölgedir."
+              },
+              {
+                "name": "Korumacı Ticaret Politikaları",
+                "description": "İç pazarı korumak amacıyla uygulanan ithalat kotaları, gümrük tarifeleri gibi politikalardır."
+              },
+              {
+                "name": "Dijital Ticaret",
+                "description": "İnternet ve dijital teknolojiler üzerinden gerçekleştirilen ticareti ifade eder."
+              },
+              {
+                "name": "Ticaret Savaşları",
+                "description": "Ülkeler arasındaki ticaret politikalarının gerginleşmesi sonucu ortaya çıkan korumacı hamlelerdir."
+              }
+            ]
+          },
+          {
+            "name": "Uluslararası Finans",
+            "description": "Uluslararası finansal piyasalar, döviz piyasaları ve uluslararası yatırımların yönetimi ile ilgilenir.",
+            "children": [
+              {
+                "name": "Uluslararası Yatırım Akışları",
+                "description": "Ülkeler arasındaki sermaye hareketlerini ifade eder. Doğrudan yabancı yatırım ve portföy yatırımları bu kapsama girer."
+              },
+              {
+                "name": "Küresel Finansal Kurumlar",
+                "description": "Dünya Bankası, IMF gibi uluslararası finansal kuruluşların rolünü ve etkisini kapsar."
+              },
+              {
+                "name": "Döviz Riski Yönetimi",
+                "description": "Kur dalgalanmalarından kaynaklanan riskleri minimize etmek için kullanılan finansal araçlar ve stratejilerdir."
+              },
+              {
+                "name": "Küresel Finansal Krizler",
+                "description": "Finansal piyasalarda yaşanan büyük dalgalanmalar ve krizlerin nedenleri ve etkilerini inceler."
+              },
+              {
+                "name": "Uluslararası Vergilendirme",
+                "description": "Çifte vergilendirmeyi önlemek ve uluslararası gelir dağılımını düzenlemek için uygulanan vergi politikalarıdır."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ekonomik Büyüme",
+        "description": "Bir ekonominin zaman içinde üretim kapasitesinin ve gelir düzeyinin artışıdır. Ekonomik büyüme, yaşam standardını yükseltir ve iş olanaklarını artırır.",
+        "children": [
+          {
+            "name": "Büyüme Faktörleri",
+            "description": "Ekonomik büyümeyi sağlayan ana unsurlardır.",
+            "children": [
+              {
+                "name": "Fiziki Sermaye",
+                "description": "Makine, bina gibi üretim araçlarının miktarı ve kalitesidir. Sermaye yatırımları büyümeyi destekler."
+              },
+              {
+                "name": "Beşeri Sermaye",
+                "description": "İşgücünün eğitimi ve becerileridir. Eğitim ve sağlık yatırımları beşeri sermayeyi artırır."
+              },
+              {
+                "name": "Teknoloji",
+                "description": "Üretim süreçlerindeki yenilikler ve verimlilik artışlarıdır. Teknolojik ilerleme büyümenin motorudur."
+              },
+              {
+                "name": "Doğal Kaynaklar",
+                "description": "Ekonomide üretimde kullanılan doğal varlıklardır. Enerji, mineraller ve tarım arazileri bu kapsama girer."
+              },
+              {
+                "name": "Girişimcilik",
+                "description": "Yeni iş fikirlerini hayata geçirme ve yenilikçi işletmeler kurma yeteneğidir."
+              }
+            ]
+          },
+          {
+            "name": "Büyüme Teorileri",
+            "description": "Ekonomik büyümeyi açıklayan teorilerdir.",
+            "children": [
+              {
+                "name": "Klasik Büyüme Teorisi",
+                "description": "Ekonomik büyümenin birikim ve emek faktörlerine bağlı olduğunu savunur."
+              },
+              {
+                "name": "Neo-Klasik Büyüme Teorisi",
+                "description": "Teknolojik ilerlemenin büyümede merkezi bir rol oynadığını vurgular."
+              },
+              {
+                "name": "İçsel Büyüme Teorisi",
+                "description": "Büyümenin ekonomik politikalar ve kurumlar tarafından belirlenebileceğini öne sürer."
+              },
+              {
+                "name": "Endojen Büyüme Teorisi",
+                "description": "Araştırma ve geliştirme, eğitim gibi faktörlerin büyümeyi içsel olarak teşvik ettiğini belirtir."
+              },
+              {
+                "name": "Solow Büyüme Modeli",
+                "description": "Teknolojik ilerleme, sermaye birikimi ve işgücü büyümesinin ekonomik büyümedeki rolünü analiz eder."
+              }
+            ]
+          },
+          {
+            "name": "Büyüme Endeksleri",
+            "description": "Ekonomik büyümeyi ölçmek için kullanılan göstergelerdir.",
+            "children": [
+              {
+                "name": "GSYH Büyüme Oranı",
+                "description": "GSYH'nın bir önceki yıla göre artış oranını ifade eder."
+              },
+              {
+                "name": "Kişi Başına Düşen Gelir",
+                "description": "Toplam gelirin nüfusa bölünmesiyle elde edilen göstergedir. Yaşam standardını yansıtır."
+              },
+              {
+                "name": "İstihdam Oranı",
+                "description": "Çalışan nüfusun toplam nüfusa oranını ifade eder."
+              },
+              {
+                "name": "Yatırım Oranı",
+                "description": "Toplam yatırımların GSYH'ya oranını gösterir."
+              },
+              {
+                "name": "İnovasyon Endeksi",
+                "description": "Ülkenin inovasyon kapasitesini ve teknolojik gelişmişliğini ölçen göstergedir."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ekonomik Dalgalanmalar",
+        "description": "Ekonomideki kısa vadeli yükseliş ve düşüş dönemleridir. Bu dalgalanmalar, ekonomik döngü olarak da bilinir ve büyüme, daralma, kriz gibi evreleri içerir.",
+        "children": [
+          {
+            "name": "Çevrim Aşamaları",
+            "description": "Ekonomik döngünün dört ana aşamasını ifade eder.",
+            "children": [
+              {
+                "name": "Genişleme",
+                "description": "Ekonomik aktivitenin arttığı, üretimin ve istihdamın yükseldiği dönemdir. Yatırımlar ve tüketim artar."
+              },
+              {
+                "name": "Zirve",
+                "description": "Büyümenin en yüksek noktası, ekonomik aktivitenin doruk yaptığı dönemdir. Enflasyonist baskılar başlayabilir."
+              },
+              {
+                "name": "Daralma",
+                "description": "Ekonomik aktivitenin azaldığı, üretimin ve istihdamın düştüğü dönemdir. Tüketim ve yatırımlar geriler."
+              },
+              {
+                "name": "Dip",
+                "description": "Daralmanın en düşük noktasına ulaştığı, ekonomik faaliyetlerin en düşük seviyede olduğu dönemdir. Yeniden toparlanma süreci başlar."
+              }
+            ]
+          },
+          {
+            "name": "Ekonomik Göstergeler",
+            "description": "Ekonomik dalgalanmaları analiz etmek için kullanılan göstergelerdir.",
+            "children": [
+              {
+                "name": "İşsizlik Oranı",
+                "description": "Ekonomik dalgalanmaların işgücü piyasasına etkisini gösterir."
+              },
+              {
+                "name": "Enflasyon Oranı",
+                "description": "Fiyat seviyesindeki değişimlerin ekonomik döngü üzerindeki etkisini yansıtır."
+              },
+              {
+                "name": "GSYH Büyüme Oranı",
+                "description": "Ekonomik genişleme ve daralma dönemlerinin büyüme üzerindeki etkisini analiz eder."
+              },
+              {
+                "name": "Tüketici Güveni",
+                "description": "Tüketicilerin ekonomik geleceğe yönelik beklentilerini ve harcama eğilimlerini ölçer."
+              },
+              {
+                "name": "Sanayi Üretim Endeksi",
+                "description": "Sanayi sektöründeki üretim hacminin değişimini gösterir."
+              }
+            ]
+          },
+          {
+            "name": "Politika Tepkileri",
+            "description": "Ekonomik dalgalanmalara karşı hükümet ve merkez bankalarının uyguladığı politikalar.",
+            "children": [
+              {
+                "name": "Maliye Politikası",
+                "description": "Ekonomik daralma dönemlerinde kamu harcamalarını artırma ve vergileri düşürme, genişleme dönemlerinde ise kamu harcamalarını azaltma ve vergileri artırma stratejileridir."
+              },
+              {
+                "name": "Para Politikası",
+                "description": "Faiz oranlarını düşürerek ekonomik aktiviteyi teşvik etme veya faiz oranlarını yükselterek enflasyonu kontrol altına alma stratejileridir."
+              },
+              {
+                "name": "Likidite Sağlama",
+                "description": "Finansal kriz dönemlerinde bankalara likidite sağlayarak finansal sistemin istikrarını koruma çabalarıdır."
+              },
+              {
+                "name": "Yapısal Reformlar",
+                "description": "Ekonominin uzun vadeli istikrarını sağlamak için iş gücü piyasası, vergi sistemi ve düzenleyici çerçevelerde yapılan değişikliklerdir."
+              },
+              {
+                "name": "Kriz Yönetimi",
+                "description": "Ekonomik krizlerin etkilerini azaltmak için acil müdahaleler ve destek programları geliştirilmesidir."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -1,17 +1,26 @@
 // src/App.js
 import React from 'react';
-import TreeNode from './components/TreeNode';
-import mindMapData from './mindMapData.json';
-
+import { MindMapProvider } from './context/MindMapContext';
+import MindMapView from './components/MindMapView';
+import SearchBar from './components/SearchBar';
+import ErrorBoundary from './components/ErrorBoundary';
+import { ThemeProvider } from './context/ThemeContext';
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 flex justify-center items-start p-10">
-      <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-4xl">
-        <h1 className="text-3xl font-bold mb-6 text-center">Makroekonomi Mindmap</h1>
-        <TreeNode node={mindMapData} />
-      </div>
-    </div>
+    <ErrorBoundary>
+      <ThemeProvider>
+        <MindMapProvider>
+          <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 flex justify-center items-start p-4 sm:p-10">
+            <div className="bg-white dark:bg-gray-800 shadow-xl rounded-lg p-4 sm:p-6 w-full max-w-5xl">
+              <h1 className="text-3xl font-bold mb-6 text-center text-gray-800 dark:text-white">
+                Makroekonomi Mindmap
+              </h1>
+              <MindMapView />
+            </div>
+          </div>
+        </MindMapProvider>
+      </ThemeProvider>
+    </ErrorBoundary>
   );
 }
-
 export default App;
