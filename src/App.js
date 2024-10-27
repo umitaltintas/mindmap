@@ -2,9 +2,10 @@
 import React from 'react';
 import { MindMapProvider } from './context/MindMapContext';
 import MindMapView from './components/MindMapView';
-import SearchBar from './components/SearchBar';
+import ScrollToTopButton from './components/ScrollToTopButton';
 import ErrorBoundary from './components/ErrorBoundary';
 import { ThemeProvider } from './context/ThemeContext';
+
 function App() {
   return (
     <ErrorBoundary>
@@ -18,9 +19,11 @@ function App() {
               <MindMapView />
             </div>
           </div>
+          <ScrollToTopButton />
         </MindMapProvider>
       </ThemeProvider>
     </ErrorBoundary>
   );
 }
+
 export default App;
