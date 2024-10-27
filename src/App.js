@@ -1,4 +1,5 @@
 // src/App.js
+
 import React from 'react';
 import { MindMapProvider } from './context/MindMapContext';
 import MindMapView from './components/MindMapView';

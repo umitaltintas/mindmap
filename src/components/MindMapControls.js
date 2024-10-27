@@ -1,4 +1,5 @@
 // src/components/MindMapControls.js
+
 import React from 'react';
 import { Moon, Sun, ChevronDown, ChevronRight, RefreshCcw } from 'react-feather';
 import { useTheme } from '../context/ThemeContext';
@@ -6,32 +7,16 @@ import { useMindMap } from '../context/MindMapContext';
 
 const MindMapControls = () => {
   const { isDarkMode, toggleDarkMode } = useTheme();
-  const { 
-    collapseAll, 
-    expandAll, 
+  const {
+    collapseAll,
+    expandAll,
     resetView,
-    expandedNodes, // Add this to track state
   } = useMindMap();
-
-  const handleCollapseAll = (e) => {
-    e.stopPropagation();
-    collapseAll();
-  };
-
-  const handleExpandAll = (e) => {
-    e.stopPropagation();
-    expandAll();
-  };
-
-  const handleResetView = (e) => {
-    e.stopPropagation();
-    resetView();
-  };
 
   return (
     <div className="flex items-center space-x-2">
       <button
-        onClick={handleCollapseAll}
+        onClick={collapseAll}
         className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 
                    hover:bg-gray-200 dark:hover:bg-gray-600
                    transition-colors duration-200 flex items-center
@@ -43,7 +28,7 @@ const MindMapControls = () => {
       </button>
 
       <button
-        onClick={handleExpandAll}
+        onClick={expandAll}
         className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 
                    hover:bg-gray-200 dark:hover:bg-gray-600
                    transition-colors duration-200 flex items-center
@@ -55,7 +40,7 @@ const MindMapControls = () => {
       </button>
 
       <button
-        onClick={handleResetView}
+        onClick={resetView}
         className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 
                    hover:bg-gray-200 dark:hover:bg-gray-600
                    transition-colors duration-200 flex items-center

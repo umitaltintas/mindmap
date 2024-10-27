@@ -1,55 +1,69 @@
 // src/components/TreeNode.js
+
 import React, { memo } from 'react';
 import { ChevronRight } from 'react-feather';
 import Highlighter from 'react-highlight-words';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useMindMap } from '../context/MindMapContext';
+import classNames from 'classnames';
 
-const TreeNode = memo(({ node, searchTerm, level = 0 }) => {
+const TreeNode = memo(({ node, searchTerm, level = 0, isRoot = false }) => {
   const { expandedNodes, toggleNode } = useMindMap();
   const hasChildren = node.children?.length > 0;
   const isExpanded = hasChildren && expandedNodes.has(node.id);
 
   const handleToggle = (e) => {
-    e.stopPropagation(); // Prevent event from bubbling up
+    e.stopPropagation(); // Prevent event bubbling
     if (hasChildren) {
       toggleNode(node.id);
     }
   };
 
-  // Separate handler for the content area to prevent collapse on description click
   const handleContentClick = (e) => {
-    e.stopPropagation(); // Prevent triggering parent node's click handler
+    e.stopPropagation();
+    // Optional: Implement any specific behavior when the content is clicked
   };
 
   const variants = {
-    hidden: { 
+    hidden: {
       opacity: 0,
       height: 0,
       transition: {
-        duration: 0.2
-      }
+        duration: 0.2,
+      },
     },
-    visible: { 
+    visible: {
       opacity: 1,
       height: 'auto',
       transition: {
-        duration: 0.2
-      }
-    }
+        duration: 0.2,
+      },
+    },
   };
 
+  // Define indentation based on the level
+  const indentationClass = classNames({
+    'mt-2': true,
+    'ml-0': level === 0,
+    'ml-4': level === 1,
+    'ml-8': level === 2,
+    'ml-12': level >= 3, // Adjust as needed for deeper levels
+  });
+
   return (
-    <div className={`ml-${level > 0 ? '4' : '0'} mt-2`}>
-      <div className="flex items-start p-2 rounded-lg transition-colors duration-200 group">
+    <div className={indentationClass}>
+      <div
+        className="flex items-start p-2 rounded-lg transition-colors duration-200 group cursor-pointer"
+        onClick={handleToggle} // Toggle when clicking the node
+      >
         {/* Expand/Collapse Button */}
-        {hasChildren && (
+        {hasChildren && !isRoot && (
           <button
             onClick={handleToggle}
             className="p-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 
-                     focus:outline-none focus:ring-2 focus:ring-blue-500"
+                       focus:outline-none focus:ring-2 focus:ring-blue-500"
             aria-expanded={isExpanded}
-            aria-label={isExpanded ? "Collapse" : "Expand"}
+            aria-label={isExpanded ? 'Collapse' : 'Expand'}
           >
             <motion.div
               initial={false}
@@ -62,10 +76,7 @@ const TreeNode = memo(({ node, searchTerm, level = 0 }) => {
         )}
 
         {/* Content Area */}
-        <div 
-          className="flex-1 ml-2 cursor-default"
-          onClick={handleContentClick}
-        >
+        <div className="flex-1 ml-2" onClick={handleContentClick}>
           <motion.div
             whileHover={{ scale: 1.01 }}
             transition={{ duration: 0.2 }}
@@ -102,11 +113,11 @@ const TreeNode = memo(({ node, searchTerm, level = 0 }) => {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              className="ml-6 border-l-2 border-gray-200 dark:border-gray-600 pl-4"
+              className="pl-4 border-l-2 border-gray-200 dark:border-gray-600"
             >
-              {node.children.map((child, index) => (
+              {node.children.map((child) => (
                 <TreeNode
-                  key={child.id || `${child.name}-${index}`}
+                  key={child.id}
                   node={child}
                   searchTerm={searchTerm}
                   level={level + 1}
