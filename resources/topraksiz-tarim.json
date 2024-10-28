@@ -1,0 +1,364 @@
+{
+    "name": "Topraksız Tarım",
+    "description": "Topraksız Tarım, bitkilerin toprak yerine besin çözeltileri ile beslenerek yetiştirildiği tarım yöntemidir. Bu yöntem, su kullanımını optimize eder, bitki büyümesini hızlandırır ve sınırlı alanlarda yüksek verimlilik sağlar. Topraksız tarım, özellikle şehir içi tarım, dikey tarım ve seracılık gibi alanlarda yaygın olarak kullanılmaktadır.",
+    "children": [
+        {
+            "name": "Sistem Türleri",
+            "description": "Topraksız tarımda kullanılan farklı sistem türleri, bitkilerin nasıl beslenip büyütüldüğünü belirler.",
+            "children": [
+                {
+                    "name": "NFT (Nutrient Film Technique)",
+                    "description": "Besin çözeltilerinin ince bir film halinde bitki köklerinin üzerinden aktığı sistemdir.",
+                    "children": [
+                        {
+                            "name": "Özellikler",
+                            "description": "Sürekli su akışı, düşük su tüketimi, kolay bakım."
+                        },
+                        {
+                            "name": "Avantajlar",
+                            "description": "Hızlı bitki büyümesi, enerji verimliliği."
+                        },
+                        {
+                            "name": "Dezavantajlar",
+                            "description": "Sistem arızalarında bitkilerin zarar görme riski."
+                        }
+                    ]
+                },
+                {
+                    "name": "DWC (Deep Water Culture)",
+                    "description": "Bitki köklerinin oksijenle zenginleştirilmiş su içinde asılı tutulduğu sistemdir.",
+                    "children": [
+                        {
+                            "name": "Özellikler",
+                            "description": "Kökler doğrudan besin çözeltisine batık, hava taşıyıcılar kullanılır."
+                        },
+                        {
+                            "name": "Avantajlar",
+                            "description": "Hızlı büyüme, yüksek oksijen seviyesi."
+                        },
+                        {
+                            "name": "Dezavantajlar",
+                            "description": "Sistem bakımı ve oksijen seviyesinin kontrolü gereklidir."
+                        }
+                    ]
+                },
+                {
+                    "name": "Ebb and Flow",
+                    "description": "Besin çözeltilerinin periyodik olarak bitki köklerine akıtıldığı ve geri çekildiği sistemdir.",
+                    "children": [
+                        {
+                            "name": "Özellikler",
+                            "description": "Periyodik su akışı, drenaj sistemleri kullanılır."
+                        },
+                        {
+                            "name": "Avantajlar",
+                            "description": "Toprak benzeri ortam, geniş bitki yelpazesi."
+                        },
+                        {
+                            "name": "Dezavantajlar",
+                            "description": "Pompa arızaları durumunda bitkiler zarar görebilir."
+                        }
+                    ]
+                },
+                {
+                    "name": "Aeroponics",
+                    "description": "Bitki köklerinin havada asılı kaldığı ve düzenli olarak besin çözeltileri ile püskürtüldüğü sistemdir.",
+                    "children": [
+                        {
+                            "name": "Özellikler",
+                            "description": "Yüksek oksijen seviyesi, su ve besin verimliliği."
+                        },
+                        {
+                            "name": "Avantajlar",
+                            "description": "Hızlı büyüme, düşük su tüketimi."
+                        },
+                        {
+                            "name": "Dezavantajlar",
+                            "description": "Teknik bilgi ve hassas bakım gerektirir."
+                        }
+                    ]
+                },
+                {
+                    "name": "Drip Sistemler",
+                    "description": "Besin çözeltilerinin damlatma yoluyla bitki köklerine ulaştırıldığı sistemdir.",
+                    "children": [
+                        {
+                            "name": "Özellikler",
+                            "description": "Kontrollü su ve besin dağıtımı, esnek yapı."
+                        },
+                        {
+                            "name": "Avantajlar",
+                            "description": "Çeşitli bitkilerle uyumlu, düşük su israfı."
+                        },
+                        {
+                            "name": "Dezavantajlar",
+                            "description": "Damlama sistemlerinde tıkanma riski."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Avantajları",
+            "description": "Topraksız tarımın sağladığı çeşitli faydalar, geleneksel tarım yöntemlerine göre üstünlükler sunar.",
+            "children": [
+                {
+                    "name": "Su Verimliliği",
+                    "description": "Su tekrar kullanımı sayesinde su tüketimi minimuma indirilir."
+                },
+                {
+                    "name": "Kontrollü Ortam",
+                    "description": "Sıcaklık, nem, ışık gibi faktörler kontrol edilerek optimal bitki büyüme koşulları sağlanır."
+                },
+                {
+                    "name": "Daha Hızlı Büyüme",
+                    "description": "Besinlerin doğrudan bitki köklerine ulaştırılması sayesinde büyüme süreçleri hızlanır."
+                },
+                {
+                    "name": "Azalan Zararlı Kullanımı",
+                    "description": "Topraksız tarımda pestisit kullanımı azaltılarak daha sağlıklı ürünler elde edilir."
+                },
+                {
+                    "name": "Mekânsal Verimlilik",
+                    "description": "Dikey tarım gibi yöntemlerle sınırlı alanlarda daha fazla ürün yetiştirilebilir."
+                }
+            ]
+        },
+        {
+            "name": "Dezavantajları",
+            "description": "Topraksız tarımın bazı zorlukları ve sınırlamaları bulunmaktadır.",
+            "children": [
+                {
+                    "name": "Yüksek Başlangıç Maliyeti",
+                    "description": "Sistem kurulumu ve ekipman maliyetleri yüksek olabilir."
+                },
+                {
+                    "name": "Teknik Bilgi Gereksinimi",
+                    "description": "Sistemlerin doğru çalışması için teknik bilgi ve deneyim gereklidir."
+                },
+                {
+                    "name": "Enerji Tüketimi",
+                    "description": "Aydınlatma, havalandırma ve su pompaları gibi sistemler enerji tüketimini artırabilir."
+                },
+                {
+                    "name": "Sistem Arızaları",
+                    "description": "Pompa veya aydınlatma gibi kritik bileşenlerin arızalanması durumunda bitkiler zarar görebilir."
+                }
+            ]
+        },
+        {
+            "name": "Bileşenler",
+            "description": "Topraksız tarım sistemlerinde kullanılan temel bileşenler, bitkilerin sağlıklı bir şekilde büyümesi için gereklidir.",
+            "children": [
+                {
+                    "name": "Su Kaynağı",
+                    "description": "Temiz ve kaliteli su, besin çözeltilerinin hazırlanmasında kullanılır."
+                },
+                {
+                    "name": "Besin Çözeltileri",
+                    "description": "Bitkilerin ihtiyaç duyduğu makro ve mikro besinlerin bulunduğu solüsyon."
+                },
+                {
+                    "name": "Aydınlatma Sistemleri",
+                    "description": "Doğal ışığın yeterli olmadığı ortamlarda yapay aydınlatma sağlanır (LED, HPS)."
+                },
+                {
+                    "name": "Havalandırma",
+                    "description": "Hava dolaşımını sağlayarak bitkilerin oksijen almasını ve sıcaklığın kontrolünü sağlar."
+                },
+                {
+                    "name": "pH ve EC Ölçüm Aletleri",
+                    "description": "Besin çözeltilerinin pH ve elektriksel iletkenlik seviyelerinin izlenmesi için kullanılır."
+                }
+            ]
+        },
+        {
+            "name": "Bitkiler",
+            "description": "Topraksız tarımda başarılı bir şekilde yetiştirilebilen çeşitli bitki türleri bulunmaktadır.",
+            "children": [
+                {
+                    "name": "Domates",
+                    "description": "Topraksız tarımda yaygın olarak yetiştirilen, yüksek verimli bir sebzedir."
+                },
+                {
+                    "name": "Salatalık",
+                    "description": "Hızlı büyüyen ve sulu yapısıyla topraksız tarımda tercih edilen bir bitkidir."
+                },
+                {
+                    "name": "Marul",
+                    "description": "Hızlı hasat edilebilen, düşük bakım gerektiren yapraklı bir sebzedir."
+                },
+                {
+                    "name": "Biber",
+                    "description": "Topraksız tarımda verimli şekilde yetiştirilebilen, çeşitli çeşitleri bulunan bir bitkidir."
+                },
+                {
+                    "name": "Çilek",
+                    "description": "Topraksız tarımda yetiştirilen, meyve vermesi kolay ve yüksek verimli bir bitkidir."
+                }
+            ]
+        },
+        {
+            "name": "Uygulama Alanları",
+            "description": "Topraksız tarımın farklı uygulama alanları, çeşitli ihtiyaçlara ve ortamlara uyum sağlar.",
+            "children": [
+                {
+                    "name": "Ev Bahçeciliği",
+                    "description": "Küçük ölçekli sistemlerle ev içinde bitki yetiştirme imkanı."
+                },
+                {
+                    "name": "Ticari Seralar",
+                    "description": "Büyük ölçekli üretim için optimize edilmiş seralar."
+                },
+                {
+                    "name": "Dikey Tarım",
+                    "description": "Yüksek katmanlı sistemlerle sınırlı alanlarda maksimum verimlilik sağlama."
+                },
+                {
+                    "name": "Araştırma Laboratuvarları",
+                    "description": "Bitki biyolojisi ve tarım teknolojileri üzerine araştırmalar yapılan alanlar."
+                }
+            ]
+        },
+        {
+            "name": "Besin Çözeltileri",
+            "description": "Bitkilerin sağlıklı büyümesi için gerekli olan besin maddelerini içeren solüsyonlar.",
+            "children": [
+                {
+                    "name": "Makro Besinler",
+                    "description": "Azot (N), fosfor (P), potasyum (K), kalsiyum (Ca), magnezyum (Mg), kükürt (S) gibi temel besin maddeleri."
+                },
+                {
+                    "name": "Mikro Besinler",
+                    "description": "Demir (Fe), manganez (Mn), çinko (Zn), bakır (Cu), bor (B), molibden (Mo), klor (Cl) gibi iz elementler."
+                },
+                {
+                    "name": "pH Kontrolü",
+                    "description": "Besin çözeltilerinin pH seviyesinin bitki ihtiyaçlarına uygun olarak ayarlanması."
+                }
+            ]
+        },
+        {
+            "name": "Enerji Kullanımı",
+            "description": "Topraksız tarım sistemlerinde kullanılan enerji kaynakları ve yönetimi.",
+            "children": [
+                {
+                    "name": "Aydınlatma",
+                    "description": "Bitkilerin fotosentez yapabilmesi için gerekli ışığın sağlanması.",
+                    "children": [
+                        {
+                            "name": "LED Aydınlatma",
+                            "description": "Enerji verimli, uzun ömürlü ve spektrum kontrolü sağlayan aydınlatma sistemi."
+                        },
+                        {
+                            "name": "HPS (High Pressure Sodium)",
+                            "description": "Yüksek basınçlı sodyum lambaları, genellikle meyve ve çiçek yetiştirmede kullanılır."
+                        }
+                    ]
+                },
+                {
+                    "name": "Pompa Sistemleri",
+                    "description": "Besin çözeltilerinin dolaşımını sağlayan pompalar."
+                },
+                {
+                    "name": "Havalandırma Sistemleri",
+                    "description": "Hava dolaşımını sağlayarak bitkilerin oksijen almasını ve sıcaklığın kontrolünü sağlar."
+                }
+            ]
+        },
+        {
+            "name": "Su Yönetimi",
+            "description": "Topraksız tarımda suyun verimli ve sürdürülebilir bir şekilde kullanımı.",
+            "children": [
+                {
+                    "name": "Sirkülasyon",
+                    "description": "Besin çözeltilerinin sürekli veya periyodik olarak bitkilere ulaştırılması ve geri alınması."
+                },
+                {
+                    "name": "Su Arıtma",
+                    "description": "Su kalitesinin korunması için filtrasyon ve arıtma yöntemleri."
+                },
+                {
+                    "name": "Yeniden Kullanım",
+                    "description": "Kullanılmış besin çözeltilerinin tekrar kullanılması ve atıkların azaltılması."
+                }
+            ]
+        },
+        {
+            "name": "Pazarlama ve Ekonomi",
+            "description": "Topraksız tarımın ekonomik yönleri ve pazarlama stratejileri.",
+            "children": [
+                {
+                    "name": "Maliyet Analizi",
+                    "description": "Sistem kurulumu, işletme ve bakım maliyetlerinin hesaplanması."
+                },
+                {
+                    "name": "Pazar Talebi",
+                    "description": "Üretilen ürünlerin pazar ihtiyaçlarına uygunluğu ve talep analizi."
+                },
+                {
+                    "name": "Üretim Verimliliği",
+                    "description": "Düşük maliyetle yüksek verim elde edilmesi için yapılan optimizasyon çalışmaları."
+                },
+                {
+                    "name": "Sürdürülebilirlik",
+                    "description": "Çevresel etkilerin minimize edilmesi ve uzun vadeli üretim hedefleri."
+                }
+            ]
+        },
+        {
+            "name": "Teknoloji ve İnovasyon",
+            "description": "Topraksız tarımda kullanılan modern teknolojiler ve yenilikçi uygulamalar.",
+            "children": [
+                {
+                    "name": "Otomasyon Sistemleri",
+                    "description": "Bitki yetiştirme süreçlerinin otomatikleştirilmesi için kullanılan sistemler."
+                },
+                {
+                    "name": "Sensörler ve İzleme",
+                    "description": "pH, EC, sıcaklık, nem gibi parametrelerin sürekli izlenmesi için sensörler."
+                },
+                {
+                    "name": "Veri Analitiği",
+                    "description": "Toplanan verilerin analiz edilerek üretim süreçlerinin optimize edilmesi."
+                },
+                {
+                    "name": "Yapay Zeka Uygulamaları",
+                    "description": "Bitki sağlığı ve üretim verimliliğini artırmak için AI destekli çözümler."
+                }
+            ]
+        },
+        {
+            "name": "Sanat Akımları",
+            "description": "Topraksız tarım ile doğrudan ilgili olmayabilir. Bu node muhtemelen yanlışlıkla eklenmiş olabilir. Aşağıda düzeltilmiş haliyle devam ediyorum.",
+            "children": []
+        },
+        {
+            "name": "Sanatçı ve Eserler",
+            "description": "Topraksız tarım ile doğrudan ilgili olmayabilir. Bu node muhtemelen yanlışlıkla eklenmiş olabilir. Aşağıda düzeltilmiş haliyle devam ediyorum.",
+            "children": []
+        },
+        {
+            "name": "Sanatın Toplumsal ve Kültürel Bağlamı",
+            "description": "Topraksız tarımın toplum üzerindeki etkisi ve kültürel değerlerle ilişkisi.",
+            "children": [
+                {
+                    "name": "Çevresel Etkiler",
+                    "description": "Topraksız tarımın doğal kaynaklar üzerindeki olumlu ve olumsuz etkileri."
+                },
+                {
+                    "name": "Kentsel Tarım",
+                    "description": "Şehir içinde yer alan topraksız tarım projelerinin sosyal ve ekonomik etkileri."
+                },
+                {
+                    "name": "Gıda Güvenliği",
+                    "description": "Topraksız tarımın gıda üretiminde sürdürülebilirlik ve güvenlik sağlaması."
+                },
+                {
+                    "name": "Toplum Sağlığı",
+                    "description": "Pestisit kullanımının azaltılması ve daha sağlıklı ürünlerin tüketilmesi."
+                }
+            ]
+        }
+    ]
+}

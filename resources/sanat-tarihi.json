@@ -1,0 +1,1060 @@
+{
+    "name": "Sanat Tarihi",
+    "description": "Sanat Tarihi, sanat eserlerinin yaratılışını, gelişimini ve değişimini inceleyen disiplindir. Farklı dönemlerdeki sanatsal akımlar, teknikler, temalar ve sanatçıların etkileşimleri üzerine odaklanır. Sanat tarihi, kültürel, toplumsal ve politik bağlamlarda sanatın rolünü anlamaya çalışır.",
+    "children": [
+        {
+            "name": "Antik Sanat",
+            "description": "Antik dönemlerde (M.Ö. 3000 - M.S. 500) üretilen sanat eserlerini kapsar. Mimari, heykel, seramik ve resim gibi sanat dallarını içerir.",
+            "children": [
+                {
+                    "name": "Mısır Sanatı",
+                    "description": "Mısır uygarlığının sanatını, piramitler, anıt mezarlar, hiyeroglifler ve heykeller aracılığıyla ifade eder.",
+                    "children": [
+                        {
+                            "name": "Mimari",
+                            "description": "Piramitler, tapınaklar ve anıtsal yapılar.",
+                            "children": [
+                                {
+                                    "name": "Büyük Piramit",
+                                    "description": "Giza'da bulunan ve Keops Piramidi olarak da bilinen anıtsal yapı."
+                                },
+                                {
+                                    "name": "Karnak Tapınağı",
+                                    "description": "Luxor'da bulunan, tanrı Amun'a adanmış büyük tapınak kompleksi."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Heykel",
+                            "description": "Tanrı figürleri, firavun portreleri ve anıt heykeller.",
+                            "children": [
+                                {
+                                    "name": "Bastet Heykeli",
+                                    "description": "Kedi tanrıçası Bastet'in temsil edildiği heykeller."
+                                },
+                                {
+                                    "name": "Kuzular ve Nabtus",
+                                    "description": "Firavunların güç ve otoritesini simgeleyen heykeller."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Hiyeroglifler",
+                            "description": "Mısır yazı sistemi, dini metinler ve kompozisyonlarda kullanılır.",
+                            "children": [
+                                {
+                                    "name": "Papirüs Yazıtları",
+                                    "description": "Resmi belgeler ve dini metinlerin yazıldığı papirüs rulolar."
+                                },
+                                {
+                                    "name": "Anıtsal Kitaplar",
+                                    "description": "Duvar yazıları ve mezar odası süslemeleri."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Yunan Sanatı",
+                    "description": "Antik Yunan'ın estetik anlayışını, heykel, mimari ve seramiklerdeki idealizasyon ve oran prensiplerini içerir.",
+                    "children": [
+                        {
+                            "name": "Mimari",
+                            "description": "Dört temel sütun düzeni: Dor, İyon ve Korint.",
+                            "children": [
+                                {
+                                    "name": "Parthenon",
+                                    "description": "Athena'ya adanmış olan ve Dor düzenini kullanan ünlü tapınak."
+                                },
+                                {
+                                    "name": "Erechtheion",
+                                    "description": "Çok sütunlu yapısıyla tanınan Athena tapınağı."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Heykel",
+                            "description": "İdeal insan formu, hareket ve dengeyi vurgulayan heykel sanatı.",
+                            "children": [
+                                {
+                                    "name": "Diskobil",
+                                    "description": "Atletik figürlerin dinamik pozlarda tasvir edildiği heykeller."
+                                },
+                                {
+                                    "name": "Kouroi ve Korai",
+                                    "description": "Genç erkek ve kadın figürlerinin temsil edildiği seramik heykeller."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Seramik",
+                            "description": "Vazolar, amforalar ve diğer günlük kullanımlı seramik eserler.",
+                            "children": [
+                                {
+                                    "name": "Kırmızı ve Siyah Seramik",
+                                    "description": "Sıklıkla figüratif süslemelerle kullanılan geleneksel Yunan seramik tarzları."
+                                },
+                                {
+                                    "name": "Dekoratif Motifler",
+                                    "description": "Mitolojik sahneler ve geometrik desenlerle süslenmiş seramikler."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Roma Sanatı",
+                    "description": "Roma İmparatorluğu dönemindeki sanatın, mimari mühendislik, mozaik ve heykel çalışmalarıyla gelişimini kapsar.",
+                    "children": [
+                        {
+                            "name": "Mimari",
+                            "description": "Kemeri, kubbeyi ve beton kullanımını geliştiren Roma mühendisliği.",
+                            "children": [
+                                {
+                                    "name": "Kolezyum",
+                                    "description": "Roma'nın ünlü amfitiyatrosu, gladyatör dövüşlerine ev sahipliği yapmıştır."
+                                },
+                                {
+                                    "name": "Pantheon",
+                                    "description": "Dairesel kubbesi ve büyük mermer sütunlarıyla tanınan tapınak."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Mozaik",
+                            "description": "Renkli taş ve cam parçalarından yapılan detaylı zemin ve duvar süslemeleri.",
+                            "children": [
+                                {
+                                    "name": "Roma Mozaikleri",
+                                    "description": "Mitolojik sahneler, günlük yaşam ve geometrik desenlerle süslenmiş mozaikler."
+                                },
+                                {
+                                    "name": "Flores de Roma",
+                                    "description": "Çiçek desenleri ve hayvan figürleri içeren mozaik stilleri."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Heykel",
+                            "description": "Portre heykelleri, tanrı figürleri ve anıtsal heykeller.",
+                            "children": [
+                                {
+                                    "name": "Portre Heykelleri",
+                                    "description": "Gerçekçi yüz ifadeleri ve detaylı saç modelleri ile tanınan portreler."
+                                },
+                                {
+                                    "name": "Anıtsal Heykeller",
+                                    "description": "Zafer heykelleri ve imparator portreleri."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Helenistik Sanat",
+                    "description": "M.Ö. 323 sonrası Yunanistan'da ortaya çıkan, daha dramatik ve duygusal ifadeleri barındıran sanat akımı.",
+                    "children": [
+                        {
+                            "name": "Dramatik Heykeller",
+                            "description": "Daha fazla hareket ve duygusal ifade içeren heykel çalışmaları.",
+                            "children": [
+                                {
+                                    "name": "Laocoön ve Oğulları",
+                                    "description": "Ağrılı ve hareketli figürlerle trajik bir sahnenin betimlenmesi."
+                                },
+                                {
+                                    "name": "Venüs de Milo",
+                                    "description": "Duygusal ve doğal duruşuyla ünlü heykel."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Tiyatro Mimaris",
+                            "description": "Daha büyük ve akustik açıdan geliştirilmiş tiyatro yapıları.",
+                            "children": [
+                                {
+                                    "name": "Dionysos Tiyatrosu",
+                                    "description": "Atina'da bulunan büyük açık hava tiyatrosu."
+                                },
+                                {
+                                    "name": "Pergamon Tiyatrosu",
+                                    "description": "Büyük seyirci kapasitesine sahip dramatik yapılar."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Seramik",
+                            "description": "Helenistik döneme özgü detaylı süslemeler ve figüratif tasarımlar.",
+                            "children": [
+                                {
+                                    "name": "Apulian Seramik",
+                                    "description": "Renkli ve detaylı süslemelerle tanınan güney İtalya seramikleri."
+                                },
+                                {
+                                    "name": "Tanrılar ve Kahramanlar",
+                                    "description": "Mitolojik figürlerle süslenmiş seramik tasarımlar."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Ortaçağ Sanatı",
+            "description": "5. yüzyıldan 15. yüzyıla kadar süren dönemde üretilen sanat eserlerini kapsar. Genellikle dini temalar ön plandadır.",
+            "children": [
+                {
+                    "name": "Romanesk",
+                    "description": "Yüksek kemerler, kalın duvarlar ve küçük pencerelerle karakterize edilen erken Ortaçağ mimarisi ve sanatı.",
+                    "children": [
+                        {
+                            "name": "Mimari",
+                            "description": "Kalın taş duvarlar, yuvarlak kemerler ve bastiyonlarla donatılmış kiliseler.",
+                            "children": [
+                                {
+                                    "name": "Saint-Sernin Bazilikası",
+                                    "description": "Toulouse'da bulunan büyük bir Romanesk kilisesi."
+                                },
+                                {
+                                    "name": "Cluny Abbey",
+                                    "description": "Fransa'da ünlü bir Romanesk manastırı."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Heykel",
+                            "description": "Kilisenin dış cephelerinde dini figürler ve semboller.",
+                            "children": [
+                                {
+                                    "name": "Kapı Heykelleri",
+                                    "description": "Biblical sahnelerin tasvir edildiği dekoratif heykeller."
+                                },
+                                {
+                                    "name": "Kule Heykelleri",
+                                    "description": "Dinî liderlerin ve azizlerin temsil edildiği heykeller."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "İllüstrasyon",
+                            "description": "Manastır el yazmalarında kullanılan süslü yazılar ve resimler.",
+                            "children": [
+                                {
+                                    "name": "İncil İllüstrasyonları",
+                                    "description": "Kutsal metinlerin resmedildiği detaylı süslemeler."
+                                },
+                                {
+                                    "name": "Kitap Süslemeleri",
+                                    "description": "El yazmalarındaki süslü başlıklar ve çerçeveler."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Gotik",
+                    "description": "Yüksek vitray pencereler, sivri kemerler ve uçan payandalarla tanımlanan Ortaçağ'ın son dönem sanatı.",
+                    "children": [
+                        {
+                            "name": "Mimari",
+                            "description": "Yüksek tavanlar, uçan payandalar ve vitray pencereler.",
+                            "children": [
+                                {
+                                    "name": "Notre-Dame Katedrali",
+                                    "description": "Paris'te bulunan ünlü Gotik katedral."
+                                },
+                                {
+                                    "name": "Chartres Katedrali",
+                                    "description": "Fransa'da yer alan, vitray pencereleriyle meşhur bir yapı."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Vitray",
+                            "description": "Renkli cam parçalarından yapılan dini temalı pencereler.",
+                            "children": [
+                                {
+                                    "name": "Açılış Vitrayları",
+                                    "description": "Kilisenin girişinde bulunan büyük vitray pencereler."
+                                },
+                                {
+                                    "name": "St. Denis Vitrayları",
+                                    "description": "Fransa'daki en eski vitray örneklerinden bazıları."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Heykel",
+                            "description": "Dinî figürler, heykel süslemeleri ve gargoyeller.",
+                            "children": [
+                                {
+                                    "name": "Gargoyeller",
+                                    "description": "Su tahliye sistemlerine entegre edilmiş dekoratif heykeller."
+                                },
+                                {
+                                    "name": "Kilise Heykelleri",
+                                    "description": "Azizler, melekler ve dini sahnelerin tasvir edildiği heykeller."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Resim",
+                            "description": "Mural ve tavan freskleri ile dini hikayelerin anlatımı.",
+                            "children": [
+                                {
+                                    "name": "Tavan Freskleri",
+                                    "description": "Kilisenin tavanına boyanan dini sahneler."
+                                },
+                                {
+                                    "name": "Duvar Muraları",
+                                    "description": "Kilisenin iç duvarlarında yer alan dini resimler."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Bizans Sanatı",
+                    "description": "Doğu Roma İmparatorluğu'nun sanatı, mozaikler, ikonalar ve kubbeli yapılarla öne çıkar.",
+                    "children": [
+                        {
+                            "name": "Mimari",
+                            "description": "Mermer kubbeler, geniş avlular ve süslü süslemeler.",
+                            "children": [
+                                {
+                                    "name": "Ayasofya",
+                                    "description": "İstanbul'da bulunan, büyük kubbesi ve mozaikleriyle ünlü yapı."
+                                },
+                                {
+                                    "name": "Hagia Irene",
+                                    "description": "İstanbul'da bulunan erken Bizans kilisesi."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Mozaik",
+                            "description": "Renkli taş ve cam parçalarından yapılan dini ve portre mozaikleri.",
+                            "children": [
+                                {
+                                    "name": "Deesis Mozaikleri",
+                                    "description": "İsa, Meryem ve Aziz Stefan gibi figürlerin yer aldığı mozaikler."
+                                },
+                                {
+                                    "name": "Altın Mozaikler",
+                                    "description": "Altın yaprak kullanılarak yapılan parlak mozaik süslemeler."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "İkonalar",
+                            "description": "Dini figürlerin boyandığı ahşap paneller.",
+                            "children": [
+                                {
+                                    "name": "Azize İkonaları",
+                                    "description": "Azizlerin ve dini figürlerin resmedildiği ikonalar."
+                                },
+                                {
+                                    "name": "İsa İkonası",
+                                    "description": "İsa'nın farklı temsillerinin bulunduğu ikonalar."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Kalligrafi",
+                            "description": "Dini metinlerin süslü yazı sanatı.",
+                            "children": [
+                                {
+                                    "name": "Sinopsis",
+                                    "description": "İncil metinlerinin süslü yazılarla yazıldığı el yazmaları."
+                                },
+                                {
+                                    "name": "Liturgik Yazılar",
+                                    "description": "Dini ritüellerde kullanılan yazılı materyaller."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Rönesans",
+            "description": "14. yüzyılda İtalya'da başlayıp Avrupa'ya yayılan, yeniden doğuş anlamına gelen sanat ve kültür hareketi.",
+            "children": [
+                {
+                    "name": "İtalyan Rönesansı",
+                    "description": "Leonardo da Vinci, Michelangelo ve Raphael gibi sanatçıların öne çıktığı dönem.",
+                    "children": [
+                        {
+                            "name": "Mimari",
+                            "description": "Klasik antik mimari öğelerin yeniden canlandırılması.",
+                            "children": [
+                                {
+                                    "name": "Floransa Katedrali",
+                                    "description": "Brunelleschi'nin kubbesiyle ünlü yapı."
+                                },
+                                {
+                                    "name": "San Pietro Bazilikası",
+                                    "description": "Venezia'da bulunan etkileyici bir Rönesans yapısı."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Heykel",
+                            "description": "İnsan anatomisinin idealize edilmesi ve doğal duruş.",
+                            "children": [
+                                {
+                                    "name": "David",
+                                    "description": "Michelangelo tarafından yaratılan, insan formunun mükemmel ifadesi."
+                                },
+                                {
+                                    "name": "Pietà",
+                                    "description": "Michelangelo'nun Hassasiyet ve detayla işlenmiş heykeli."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Resim",
+                            "description": "Perspektif kullanımı, doğallık ve insan figürünün ön plana çıkması.",
+                            "children": [
+                                {
+                                    "name": "Son Akşam Yemeği",
+                                    "description": "Leonardo da Vinci'nin dramatik ve perspektif kullanımıyla dikkat çeken eseri."
+                                },
+                                {
+                                    "name": "Raffaello'nun Freskleri",
+                                    "description": "Vatikanda yer alan Raffaello'nun etkileyici duvar resimleri."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Edebiyat ve Sanat Teorisi",
+                            "description": "Sanatın doğası ve estetik üzerine yazılan teoriler.",
+                            "children": [
+                                {
+                                    "name": "Leon Battista Alberti",
+                                    "description": "Rönesans mimarisi ve sanatı üzerine yazılarıyla bilinir."
+                                },
+                                {
+                                    "name": "Leonardo da Vinci'nin Notları",
+                                    "description": "Sanat ve bilim üzerine yaptığı detaylı gözlemler."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Kuzey Rönesansı",
+                    "description": "Almanya, Hollanda ve diğer kuzey Avrupa ülkelerinde gelişen, detaylı resimler ve portrelerle karakterize edilen akım.",
+                    "children": [
+                        {
+                            "name": "Mimari",
+                            "description": "Gotik etkilerin devam etmesi ve yerel stillerin harmanlanması.",
+                            "children": [
+                                {
+                                    "name": "Brugge'nin Kanalları",
+                                    "description": "Gotik ve Rönesans mimarisinin birleştiği yapılar."
+                                },
+                                {
+                                    "name": "Cologne Katedrali",
+                                    "description": "Kuzey Rönesansı etkileri taşıyan yüksek katedrallerden biri."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Heykel",
+                            "description": "Detaylı yüz ifadeleri ve dini temalar.",
+                            "children": [
+                                {
+                                    "name": "Albrecht Dürer",
+                                    "description": "Detaylı gravürleri ve heykel çalışmalarıyla ünlü sanatçı."
+                                },
+                                {
+                                    "name": "Tilman Riemenschneider",
+                                    "description": "Ahşap heykelleriyle bilinen Almanya'nın ünlü heykeltıraşı."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Resim",
+                            "description": "Detaylı doğa betimlemeleri ve portreler.",
+                            "children": [
+                                {
+                                    "name": "Jan van Eyck",
+                                    "description": "Detaylı yağlı boya teknikleriyle ünlü Flanders ressamı."
+                                },
+                                {
+                                    "name": "Hieronymus Bosch",
+                                    "description": "Fantastik ve dini temalarla dolu resimleriyle tanınır."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Gilder ve Kitap Süslemeleri",
+                            "description": "El yazmalarının süslenmesi ve altın yaldız kullanımı.",
+                            "children": [
+                                {
+                                    "name": "Minyatür Sanatı",
+                                    "description": "Detaylı küçük boyutlu resimler ve süslemeler."
+                                },
+                                {
+                                    "name": "Altın Yaldız",
+                                    "description": "Sanat eserlerinde lüks ve ihtişamı simgeleyen altın süslemeler."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Barok",
+            "description": "17. yüzyılda Avrupa'da ortaya çıkan, dramatik ışık kullanımı ve hareketin vurgulandığı sanat akımı.",
+            "children": [
+                {
+                    "name": "Barok Mimari",
+                    "description": "Süslemeler, büyük ölçekli yapılar ve dramatik efektlerle tanımlanan mimari tarz.",
+                    "children": [
+                        {
+                            "name": "St. Peter's Basilica",
+                            "description": "Venedik'te bulunan, geniş avlusu ve süslü cephesiyle dikkat çeken yapı."
+                        },
+                        {
+                            "name": "Versailles Sarayı",
+                            "description": "Fransa'da kralın ihtişamını yansıtan büyük bir Barok sarayı."
+                        }
+                    ]
+                },
+                {
+                    "name": "Barok Resim",
+                    "description": "Caravaggio, Rembrandt gibi sanatçıların duygusal ve dinamik eserleri.",
+                    "children": [
+                        {
+                            "name": "Caravaggio",
+                            "description": "Şiddetli ışık ve gölge kullanımıyla dramatik kompozisyonlar."
+                        },
+                        {
+                            "name": "Rembrandt van Rijn",
+                            "description": "Portre ve günlük yaşam sahnelerinde derin duyguların ifadesi."
+                        },
+                        {
+                            "name": "Peter Paul Rubens",
+                            "description": "Canlı renkler ve dinamik figürlerle dolu tarih ve mitoloji sahneleri."
+                        }
+                    ]
+                },
+                {
+                    "name": "Barok Heykel",
+                    "description": "Heykellerde hareket ve duygunun yoğun ifadesi.",
+                    "children": [
+                        {
+                            "name": "Gian Lorenzo Bernini",
+                            "description": "Dinamik ve dramatik heykelleriyle Barok sanatının önde gelen isimlerinden."
+                        },
+                        {
+                            "name": "Francesco Borromini",
+                            "description": "Mimarlıkla heykel sanatını harmanlayan eserleri."
+                        }
+                    ]
+                },
+                {
+                    "name": "Barok Müzik ve Tiyatro",
+                    "description": "Müzik ve tiyatroda duygusal ifade ve dramatik yapılar.",
+                    "children": [
+                        {
+                            "name": "Antonio Vivaldi",
+                            "description": "Duygusal ve hareketli barok müziğin bestecisi."
+                        },
+                        {
+                            "name": "Molière",
+                            "description": "Barok tiyatronun önemli oyun yazarlarından."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Modern Sanat",
+            "description": "19. yüzyılın sonlarından 20. yüzyıl ortalarına kadar uzanan dönemde ortaya çıkan yenilikçi sanat hareketleri.",
+            "children": [
+                {
+                    "name": "Empresyonizm",
+                    "description": "Işık ve renk oyunlarına odaklanan, anlık izlenimleri yansıtan resim akımı.",
+                    "children": [
+                        {
+                            "name": "Claude Monet",
+                            "description": "Işık ve renklerin doğadaki etkilerini yansıtan serileriyle ünlü."
+                        },
+                        {
+                            "name": "Pierre-Auguste Renoir",
+                            "description": "Portre ve günlük yaşam sahnelerindeki yumuşak renk kullanımı."
+                        }
+                    ]
+                },
+                {
+                    "name": "Kübizm",
+                    "description": "Nesneleri geometrik şekillerle parçalayarak yeniden yorumlayan sanat hareketi.",
+                    "children": [
+                        {
+                            "name": "Pablo Picasso",
+                            "description": "Kübizmin kurucularından, nesneleri çoklu perspektiflerden gören eserleri."
+                        },
+                        {
+                            "name": "Georges Braque",
+                            "description": "Picasso ile birlikte Kübizm'in gelişimine katkıda bulunan sanatçı."
+                        }
+                    ]
+                },
+                {
+                    "name": "Dadaizm",
+                    "description": "Mantığın reddedildiği, absürd ve anti-sanat anlayışını benimseyen akım.",
+                    "children": [
+                        {
+                            "name": "Marcel Duchamp",
+                            "description": "Ready-made kavramını tanıtan sanatçı."
+                        },
+                        {
+                            "name": "Hannah Höch",
+                            "description": "Kollaj ve fotomontaj tekniklerini kullanan Dada sanatçısı."
+                        }
+                    ]
+                },
+                {
+                    "name": "Sürrealizm",
+                    "description": "Bilinçaltını ve rüyaları keşfederek gerçeküstü imgeler yaratan sanat hareketi.",
+                    "children": [
+                        {
+                            "name": "Salvador Dalí",
+                            "description": "Gerçeküstü imgeleri ve dramatik peyzajlarıyla tanınan sanatçı."
+                        },
+                        {
+                            "name": "René Magritte",
+                            "description": "Gerçeküstü ve paradoksal sahneler yaratan Belçikalı ressam."
+                        }
+                    ]
+                },
+                {
+                    "name": "Fütürizm",
+                    "description": "Hareket, teknoloji ve modern yaşamın dinamizmini vurgulayan sanat akımı.",
+                    "children": [
+                        {
+                            "name": "Umberto Boccioni",
+                            "description": "Hareketin ve dinamizmin ifadesinde öncü olan İtalyan sanatçı."
+                        },
+                        {
+                            "name": "Giacomo Balla",
+                            "description": "Işık ve hareketin sanatla birleşimini keşfeden fütürist ressam."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Çağdaş Sanat",
+            "description": "20. yüzyılın ortalarından günümüze kadar olan dönemde üretilen, çeşitli medya ve teknikleri kullanan sanat.",
+            "children": [
+                {
+                    "name": "Soyut Sanat",
+                    "description": "Gerçek nesneleri temsil etmek yerine renk, form ve çizgilerin kullanıldığı sanat türü.",
+                    "children": [
+                        {
+                            "name": "Jackson Pollock",
+                            "description": "Damla tekniğiyle soyut ekspresyonizmin öncüsü."
+                        },
+                        {
+                            "name": "Wassily Kandinsky",
+                            "description": "Soyut sanatın kurucularından, renk ve şekillerle duyguları ifade eden eserler."
+                        }
+                    ]
+                },
+                {
+                    "name": "Minimalizm",
+                    "description": "Basit ve sade formlar, sınırlı renk paletleri ile yapılan sanat akımı.",
+                    "children": [
+                        {
+                            "name": "Donald Judd",
+                            "description": "Basit geometrik formlarla minimal heykeller yaratan sanatçı."
+                        },
+                        {
+                            "name": "Frank Stella",
+                            "description": "Temel geometrik şekillerle soyut tablolar oluşturan ressam."
+                        }
+                    ]
+                },
+                {
+                    "name": "Multimedya Sanat",
+                    "description": "Farklı medya ve teknolojilerin bir arada kullanıldığı modern sanat biçimi.",
+                    "children": [
+                        {
+                            "name": "Nam June Paik",
+                            "description": "Video sanatı ve elektronik medya ile çalışan öncü sanatçı."
+                        },
+                        {
+                            "name": "Jenny Holzer",
+                            "description": "Işık projeksiyonları ve LED teknolojisi kullanarak mesajlar ileten sanatçı."
+                        }
+                    ]
+                },
+                {
+                    "name": "Dijital Sanat",
+                    "description": "Bilgisayar ve dijital teknolojiler kullanılarak yaratılan sanat eserleri.",
+                    "children": [
+                        {
+                            "name": "David Hockney",
+                            "description": "Dijital çizim tabletleri kullanarak yarattığı eserlerle tanınan sanatçı."
+                        },
+                        {
+                            "name": "Rafael Lozano-Hemmer",
+                            "description": "Etkileşimli dijital enstalasyonlarıyla bilinen sanatçı."
+                        }
+                    ]
+                },
+                {
+                    "name": "Performans Sanatı",
+                    "description": "Sanatçının fiziksel hareketlerini ve eylemlerini temel alan sanat türü.",
+                    "children": [
+                        {
+                            "name": "Marina Abramović",
+                            "description": "İzleyici ile etkileşimde bulunan yoğun performanslarıyla ünlü sanatçı."
+                        },
+                        {
+                            "name": "Yoko Ono",
+                            "description": "Etkileşimli ve deneysel performanslarıyla tanınan sanatçı."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Sanat Akımları",
+            "description": "Sanat tarihindeki belirli dönemlerde ortaya çıkan ortak özellikler ve temalar etrafında birleşen hareketler.",
+            "children": [
+                {
+                    "name": "Romantizm",
+                    "description": "Duyguların, doğanın ve bireysel ifadelerin ön planda olduğu 19. yüzyıl sanatı.",
+                    "children": [
+                        {
+                            "name": "Caspar David Friedrich",
+                            "description": "Doğa temalı manzaraları ve melankolik atmosferiyle bilinen Alman ressam."
+                        },
+                        {
+                            "name": "Eugène Delacroix",
+                            "description": "Renk kullanımı ve dramatik kompozisyonlarıyla öne çıkan Fransız ressam."
+                        }
+                    ]
+                },
+                {
+                    "name": "Realizm",
+                    "description": "Gerçek hayatı objektif ve detaylı bir şekilde yansıtan sanat akımı.",
+                    "children": [
+                        {
+                            "name": "Gustave Courbet",
+                            "description": "Günlük yaşam sahnelerini gerçekçi bir şekilde tasvir eden Fransız ressam."
+                        },
+                        {
+                            "name": "Jean-François Millet",
+                            "description": "Kırsal yaşam ve işçi sınıfını konu alan realist eserler."
+                        }
+                    ]
+                },
+                {
+                    "name": "Fovizm",
+                    "description": "Canlı renklerin ve cesur fırça darbelerinin kullanıldığı erken 20. yüzyıl akımı.",
+                    "children": [
+                        {
+                            "name": "Henri Matisse",
+                            "description": "Parlak renk paletleri ve basit formlarla fovist resimler yaratan Fransız sanatçı."
+                        },
+                        {
+                            "name": "André Derain",
+                            "description": "Canlı renkler ve enerjik kompozisyonlarla tanınan fovist ressam."
+                        }
+                    ]
+                },
+                {
+                    "name": "Ekspresyonizm",
+                    "description": "İçsel duyguların abartılı ve çarpıcı yollarla ifade edildiği sanat hareketi.",
+                    "children": [
+                        {
+                            "name": "Edvard Munch",
+                            "description": "Duygusal yoğunluğu yüksek, sembolik resimleriyle bilinen Norveçli ressam."
+                        },
+                        {
+                            "name": "Egon Schiele",
+                            "description": "Çarpıcı figüratif çizgiler ve yoğun duygularla dolu eserler."
+                        }
+                    ]
+                },
+                {
+                    "name": "Pop Art",
+                    "description": "Popüler kültür unsurlarını sanatla birleştiren 1950'ler sonrası akım.",
+                    "children": [
+                        {
+                            "name": "Andy Warhol",
+                            "description": "Ticari ürünler ve ünlü kişiliklerin tekrar eden imgeleriyle tanınan sanatçı."
+                        },
+                        {
+                            "name": "Roy Lichtenstein",
+                            "description": "Çizgi roman estetiğini yüksek kontrastlı renklerle kullanan ressam."
+                        }
+                    ]
+                },
+                {
+                    "name": "Postmodernizm",
+                    "description": "Modernizmin sınırlarını zorlayan, çeşitli stilleri ve disiplinleri harmanlayan sanat hareketi.",
+                    "children": [
+                        {
+                            "name": "Jean-Michel Basquiat",
+                            "description": "Grafiti ve soyut unsurları birleştiren çağdaş sanatçı."
+                        },
+                        {
+                            "name": "Cindy Sherman",
+                            "description": "Kendini farklı karakterlerde tasvir ederek kimlik ve cinsiyet konularını işleyen sanatçı."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Sanatçı ve Eserler",
+            "description": "Sanat tarihine yön veren önemli sanatçılar ve onların ikonik eserleri.",
+            "children": [
+                {
+                    "name": "Leonardo da Vinci",
+                    "description": "Rönesans döneminin önde gelen sanatçısı, 'Mona Lisa' ve 'Son Akşam Yemeği' eserlerinin yaratıcısı.",
+                    "children": []
+                },
+                {
+                    "name": "Michelangelo",
+                    "description": "Rönesans'ın ünlü heykeltıraşı ve ressamı, Sistine Şapeli tavan freskleri ile tanınır.",
+                    "children": []
+                },
+                {
+                    "name": "Vincent van Gogh",
+                    "description": "Post-Empresyonist ressam, 'Yıldızlı Gece' gibi ikonik eserleriyle bilinir.",
+                    "children": []
+                },
+                {
+                    "name": "Pablo Picasso",
+                    "description": "Kübizm akımının kurucularından, 'Guernica' ve 'Les Demoiselles d'Avignon' gibi eserlerin sanatçısı.",
+                    "children": []
+                },
+                {
+                    "name": "Frida Kahlo",
+                    "description": "Meksikalı ressam, kendine özgü otoportreleri ve kültürel temalarıyla tanınır.",
+                    "children": []
+                },
+                {
+                    "name": "Salvador Dalí",
+                    "description": "Sürrealist ressam, 'Belleğin Azmi' adlı eseriyle ünlüdür.",
+                    "children": []
+                },
+                {
+                    "name": "Andy Warhol",
+                    "description": "Pop Art hareketinin önde gelen isimlerinden, 'Marilyn Diptych' gibi eserlerin yaratıcısı.",
+                    "children": []
+                },
+                {
+                    "name": "Georgia O'Keeffe",
+                    "description": "Amerikalı ressam, büyük ölçekli çiçek resimleri ve peyzajlarıyla bilinir.",
+                    "children": []
+                },
+                {
+                    "name": "Jackson Pollock",
+                    "description": "Soyut ekspresyonizmin temsilcisi, damlama tekniğiyle bilinen sanatçı.",
+                    "children": []
+                },
+                {
+                    "name": "Marcel Duchamp",
+                    "description": "Dada hareketinin öncülerinden, 'Fountain' adlı hazır eserle tanınır.",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Sanatın Toplumsal ve Kültürel Bağlamı",
+            "description": "Sanatın toplum üzerindeki etkisi ve kültürel değerlerle ilişkisi.",
+            "children": [
+                {
+                    "name": "Sanat ve Siyaset",
+                    "description": "Sanatın politik mesajlar taşıması ve toplumsal değişimdeki rolü.",
+                    "children": [
+                        {
+                            "name": "Propaganda Sanatı",
+                            "description": "Siyasi ideolojileri desteklemek için kullanılan sanat eserleri.",
+                            "children": [
+                                {
+                                    "name": "Sovyet Propaganda Posterleri",
+                                    "description": "Komünist ideolojiyi yücelten görsel materyaller."
+                                },
+                                {
+                                    "name": "Nazi Propaganda",
+                                    "description": "Faşist idealleri yansıtan sanat ve mimari örnekleri."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Sosyal Hareket Sanatı",
+                            "description": "Sivil haklar, feminizm ve çevre gibi konuları ele alan sanat eserleri.",
+                            "children": [
+                                {
+                                    "name": "Feminist Sanat",
+                                    "description": "Kadın haklarını ve cinsiyet eşitliğini vurgulayan sanat."
+                                },
+                                {
+                                    "name": "Çevre Sanatı",
+                                    "description": "Doğal çevreyi koruma ve sürdürülebilirliği teşvik eden sanat eserleri."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Sanat ve Din",
+                    "description": "Dinî temaların ve ikonografilerin sanatta kullanımı.",
+                    "children": [
+                        {
+                            "name": "Kilise Sanatı",
+                            "description": "Hristiyanlık bağlamında kiliselerde kullanılan sanat eserleri.",
+                            "children": [
+                                {
+                                    "name": "Gothic Vitraylar",
+                                    "description": "Renkli cam pencerelerde dini sahnelerin tasvir edilmesi."
+                                },
+                                {
+                                    "name": "Rönesans Freskleri",
+                                    "description": "Kilise tavanlarına boyanan dini hikayeler."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "İslam Sanatı",
+                            "description": "Kalligrafi, geometrik desenler ve arabesk motiflerle süslenmiş eserler.",
+                            "children": [
+                                {
+                                    "name": "Hat Sanatı",
+                                    "description": "Kur'an ayetlerinin estetik bir şekilde yazılması."
+                                },
+                                {
+                                    "name": "Mimaride İslam Motifleri",
+                                    "description": "Camilerde kullanılan süslü kemerler ve minareler."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Hindu ve Budist Sanatı",
+                            "description": "Maneviyat ve mitolojiyi yansıtan heykeller ve resimler.",
+                            "children": [
+                                {
+                                    "name": "Hindu Tapınak Heykelleri",
+                                    "description": "Tanrı ve tanrıçaların detaylı heykelleri."
+                                },
+                                {
+                                    "name": "Budist Mandalaları",
+                                    "description": "Dini meditasyon için kullanılan karmaşık desenler."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Sanat ve Teknoloji",
+                    "description": "Teknolojinin sanat üretimi ve sunumundaki etkisi.",
+                    "children": [
+                        {
+                            "name": "Dijital Sanat",
+                            "description": "Bilgisayar ve dijital araçlarla yaratılan sanat eserleri.",
+                            "children": [
+                                {
+                                    "name": "3D Baskı",
+                                    "description": "Üç boyutlu modellerin dijital olarak oluşturulması ve basılması."
+                                },
+                                {
+                                    "name": "Sanal Gerçeklik (VR) Sanatı",
+                                    "description": "Kullanıcıların içine girebileceği sanal ortamlar yaratan sanat."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Multimedya Enstalasyonları",
+                            "description": "Ses, video ve fiziksel objelerin birleştiği sanat çalışmaları.",
+                            "children": [
+                                {
+                                    "name": "Etkileşimli Enstalasyonlar",
+                                    "description": "İzleyicinin katılımını gerektiren sanat eserleri."
+                                },
+                                {
+                                    "name": "Projeksiyon Sanatı",
+                                    "description": "Işık ve görüntü teknolojilerini kullanan görsel sanatlar."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Teknolojik İnovasyonlar",
+                            "description": "Yeni teknolojilerin sanat üretim süreçlerine entegrasyonu.",
+                            "children": [
+                                {
+                                    "name": "Robotik Sanat",
+                                    "description": "Robotlar tarafından yaratılan veya etkileşimde bulunan sanat eserleri."
+                                },
+                                {
+                                    "name": "Yapay Zeka ve Sanat",
+                                    "description": "AI algoritmalarıyla oluşturulan yaratıcı eserler."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Sanat ve Ekonomi",
+                    "description": "Sanat piyasası, sanatçının ekonomik durumu ve sanatın ticari yönleri.",
+                    "children": [
+                        {
+                            "name": "Sanat Piyasası",
+                            "description": "Sanat eserlerinin alım-satım işlemleri ve koleksiyonculuk.",
+                            "children": [
+                                {
+                                    "name": "Galeri ve Müzayede Evleri",
+                                    "description": "Sanat eserlerinin sergilendiği ve satışa sunulduğu yerler."
+                                },
+                                {
+                                    "name": "Sanat Yatırımı",
+                                    "description": "Sanat eserlerinin finansal yatırım aracı olarak kullanılması."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Sanatçının Ekonomik Durumu",
+                            "description": "Sanatçıların gelir kaynakları ve ekonomik zorlukları.",
+                            "children": [
+                                {
+                                    "name": "Stipendiyalar ve Hibe Programları",
+                                    "description": "Sanatçılara finansal destek sağlayan programlar."
+                                },
+                                {
+                                    "name": "Sanat Eğitimi ve Mesleki Gelişim",
+                                    "description": "Sanatçıların eğitim süreçleri ve kariyerlerini destekleyen kurumlar."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Ticari Sanat",
+                            "description": "Reklam, grafik tasarım ve endüstriyel tasarım gibi ticari amaçlı sanat dalları.",
+                            "children": [
+                                {
+                                    "name": "Reklam Sanatı",
+                                    "description": "Ürün ve hizmetlerin tanıtımı için yaratılan görsel ve metin çalışmaları."
+                                },
+                                {
+                                    "name": "Endüstriyel Tasarım",
+                                    "description": "Fonksiyonel ve estetik ürünlerin tasarımı."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
