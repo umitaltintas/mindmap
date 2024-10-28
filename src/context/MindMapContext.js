@@ -276,10 +276,6 @@ const MindMapProvider = ({ children }) => {
         Math.min(MAX_ZOOM, prevZoom + delta * ZOOM_STEP)
       );
 
-      // Adjust view position to zoom toward cursor
-      if (centerX !== undefined && centerY !== undefined) {
-        const zoomFactor = newZoom / prevZoom;
-      }
 
       return newZoom;
     });
@@ -374,7 +370,7 @@ const MindMapProvider = ({ children }) => {
       expandedNodes: Array.from(expandedNodes),
       zoomLevel,
     });
-  
+
     setSearchTerm('');
     setFilteredData(mindMapData);
     setExpandedNodes(new Set([ROOT_NODE_ID]));
@@ -535,44 +531,44 @@ const MindMapProvider = ({ children }) => {
       filterData,
       expandedNodes,
       toggleNode,
-  
+
       // Refs
       searchInputRef,
       mindMapRef,
-  
+
       // View controls
       zoomLevel,
       handleZoom,
-  
+
       // Node focus
       selectedNode,
       setSelectedNode,
       nodeFocus,
       focusNode,
-  
+
       // Mini-map
       showMiniMap,
       setShowMiniMap,
-  
+
       // Export and sharing
       exportMindMap,
       takeScreenshot,
       shareMindMap,
-  
+
       // History
       canUndo: historyIndex > 0,
       canRedo: historyIndex < history.length - 1,
       undo,
       redo,
-  
+
       // View management
       collapseAll,
       expandAll,
       resetView,
-  
+
       // Metrics
       getNodeMetrics,
-  
+
       // Original data
       mindMapData,
     }),

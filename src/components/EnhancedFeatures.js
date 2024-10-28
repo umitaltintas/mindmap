@@ -1,10 +1,9 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
+import React, { useEffect, useRef, useState } from 'react';
 import { useMindMap } from '../context/MindMapContext';
 
 export const MiniMap = ({ data, zoomLevel }) => {
   const miniMapRef = useRef(null);
-  const [isDragging, setIsDragging] = useState(false);
   const [mapScale, setMapScale] = useState(0.1);
   const { mindMapRef } = useMindMap();
 
@@ -59,12 +58,6 @@ export const MiniMap = ({ data, zoomLevel }) => {
 
   const handleClick = (e) => {
     if (!miniMapRef.current) return;
-
-    const rect = miniMapRef.current.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / mapScale;
-    const y = (e.clientY - rect.top) / mapScale;
-
-    // Update main view position
   };
 
   return (

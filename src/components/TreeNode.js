@@ -18,8 +18,6 @@ const TreeNode = memo(({
     nodeFocus,
     selectedNode,
     setSelectedNode,
-    zoomLevel,
-    isDragging,
     deleteNode,
     editNode,
     addChild
@@ -136,7 +134,7 @@ const TreeNode = memo(({
           </div>
 
           {/* Actions Menu - Always rendered but conditionally visible */}
-          <div 
+          <div
             className={`
               flex-shrink-0 transition-opacity duration-200
               ${(isHovered || isSelected || dropdownOpen) ? 'opacity-100' : 'opacity-0'}
@@ -144,7 +142,7 @@ const TreeNode = memo(({
           >
             <DropdownMenu.Root open={dropdownOpen} onOpenChange={setDropdownOpen}>
               <DropdownMenu.Trigger asChild>
-                <button 
+                <button
                   className="p-2 rounded-full transition-colors duration-200
                     hover:bg-gray-200 dark:hover:bg-gray-700
                     focus:outline-none focus:ring-2 focus:ring-blue-500
