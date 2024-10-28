@@ -1,0 +1,1132 @@
+{
+    "name": "İtalya'daki Turistik Noktalar",
+    "description": "İtalya, zengin tarihi, kültürel mirası, doğal güzellikleri ve lezzetli mutfağı ile dünyanın en popüler turistik destinasyonlarından biridir. Ülke genelinde keşfedilecek birçok önemli nokta bulunmaktadır.",
+    "children": [
+        {
+            "name": "Roma",
+            "description": "İtalya'nın başkenti Roma, antik kalıntıları, tarihi yapıları ve sanatı ile ünlüdür.",
+            "children": [
+                {
+                    "name": "Antik Roma",
+                    "description": "Roma İmparatorluğu'nun kalıntıları ve antik yapıları.",
+                    "children": [
+                        {
+                            "name": "Kolezyum",
+                            "description": "Antik Roma'nın en ünlü amfitiyatrosu, gladyatör dövüşlerine ev sahipliği yapmıştır."
+                        },
+                        {
+                            "name": "Roma Forumu",
+                            "description": "Antik Roma'nın politik, ticari ve sosyal merkezi."
+                        },
+                        {
+                            "name": "Pantheon",
+                            "description": "Antik Roma döneminden kalma, iyi korunmuş bir tapınak."
+                        }
+                    ]
+                },
+                {
+                    "name": "Vatikan",
+                    "description": "Dünyanın en küçük bağımsız devleti, Katolik Kilisesi'nin merkezi.",
+                    "children": [
+                        {
+                            "name": "Aziz Petrus Bazilikası",
+                            "description": "Vatikan'ın en önemli dini yapısı ve Hristiyanlık'ın en büyük kilisesi."
+                        },
+                        {
+                            "name": "Sistine Şapeli",
+                            "description": "Michelangelo'nun ünlü tavan fresklerine ev sahipliği yapar."
+                        },
+                        {
+                            "name": "Vatikan Müzeleri",
+                            "description": "Sanat eserleri koleksiyonu, Raphael Odaları ve daha fazlasını içerir."
+                        }
+                    ]
+                },
+                {
+                    "name": "Turlar ve Deneyimler",
+                    "description": "Roma'da katılabileceğiniz çeşitli turlar ve aktiviteler.",
+                    "children": [
+                        {
+                            "name": "Gondol Turları",
+                            "description": "Şehirde gondolla yapılabilecek romantik ve tarihi turlar."
+                        },
+                        {
+                            "name": "Yürüyüş Turları",
+                            "description": "Antik kalıntılar ve tarihi bölgeleri keşfetmek için rehberli yürüyüşler."
+                        },
+                        {
+                            "name": "Roma Mutfağı Deneyimi",
+                            "description": "Yerel restoranlarda İtalyan mutfağının lezzetlerini tatma fırsatı."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Venedik",
+            "description": "Kanalları, tarihi binaları ve benzersiz atmosferi ile ünlü bir su şehridir.",
+            "children": [
+                {
+                    "name": "San Marco Bölgesi",
+                    "description": "Venedik'in en ünlü bölgesi ve turistik merkezi.",
+                    "children": [
+                        {
+                            "name": "San Marco Meydanı",
+                            "description": "Venedik'in kalbi, San Marco Bazilikası ve Dükler Sarayı'nı içerir."
+                        },
+                        {
+                            "name": "San Marco Bazilikası",
+                            "description": "Muhteşem mozaiklerle süslü, Venedik'in en önemli dini yapısı."
+                        },
+                        {
+                            "name": "Dükler Sarayı",
+                            "description": "Venedik Cumhuriyeti'nin yönetim merkezi olan tarihi saray."
+                        }
+                    ]
+                },
+                {
+                    "name": "Kanallar ve Köprüler",
+                    "description": "Venedik'in benzersiz su yolları ve tarihi köprüleri.",
+                    "children": [
+                        {
+                            "name": "Grand Canal",
+                            "description": "Şehrin ana su yolu, gondol turları ile keşfedilebilir."
+                        },
+                        {
+                            "name": "Rialto Köprüsü",
+                            "description": "Grand Canal üzerindeki en eski köprülerden biri, alışveriş ve fotoğraf için ideal."
+                        },
+                        {
+                            "name": "Bridge of Sighs",
+                            "description": "Eski hapishaneye giden ünlü tarihi köprü."
+                        }
+                    ]
+                },
+                {
+                    "name": "Sanat ve Kültür",
+                    "description": "Venedik'in sanat galerileri, müzeleri ve kültürel etkinlikleri.",
+                    "children": [
+                        {
+                            "name": "Peggy Guggenheim Koleksiyonu",
+                            "description": "Modern sanat eserlerinin sergilendiği önemli bir müze."
+                        },
+                        {
+                            "name": "La Fenice Operası",
+                            "description": "Dünyaca ünlü opera binası ve konser alanı."
+                        },
+                        {
+                            "name": "Venedik Bienali",
+                            "description": "Uluslararası sanat ve mimarlık fuarı."
+                        }
+                    ]
+                },
+                {
+                    "name": "Adalar",
+                    "description": "Venedik lagününde keşfedilecek güzel adalar.",
+                    "children": [
+                        {
+                            "name": "Murano",
+                            "description": "Cam üretimi ile ünlü ada, cam atölyeleri ve mağazaları ile tanınır."
+                        },
+                        {
+                            "name": "Burano",
+                            "description": "Renkli evleri ve dantelleri ile ünlü balıkçı adası."
+                        },
+                        {
+                            "name": "Torcello",
+                            "description": "Sessiz ve tarihi bir ada, antik katedraller ve doğal güzellikler sunar."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Floransa",
+            "description": "Rönesans'ın doğum yeri olarak bilinen Floransa, sanat ve mimarisi ile dikkat çeker.",
+            "children": [
+                {
+                    "name": "Sanat ve Müzeler",
+                    "description": "Floransa'nın zengin sanat koleksiyonları ve müzeleri.",
+                    "children": [
+                        {
+                            "name": "Uffizi Galerisi",
+                            "description": "Rönesans sanat eserlerinin sergilendiği önemli bir müze."
+                        },
+                        {
+                            "name": "Accademia Galerisi",
+                            "description": "Michelangelo'nun ünlü David heykelini barındırır."
+                        },
+                        {
+                            "name": "Palazzo Pitti",
+                            "description": "Büyük bir saray kompleksi, çeşitli müzeler ve bahçeler içerir."
+                        }
+                    ]
+                },
+                {
+                    "name": "Tarihi Yapılar",
+                    "description": "Floransa'nın ikonik tarihi mimarisi.",
+                    "children": [
+                        {
+                            "name": "Duomo (Santa Maria del Fiore Katedrali)",
+                            "description": "Floransa'nın simgesi, Brunelleschi'nin kubbesi ile ünlüdür."
+                        },
+                        {
+                            "name": "Baptistery of St. John",
+                            "description": "Floransa'nın en eski dini yapılarından biri, ünlü bronz kapılarıyla tanınır."
+                        },
+                        {
+                            "name": "Ponte Vecchio",
+                            "description": "Ortaçağdan kalma tarihi bir köprü, takı dükkanları ile ünlüdür."
+                        }
+                    ]
+                },
+                {
+                    "name": "Bahçeler ve Doğa",
+                    "description": "Floransa'nın güzel bahçeleri ve yeşil alanları.",
+                    "children": [
+                        {
+                            "name": "Boboli Bahçeleri",
+                            "description": "Palazzo Pitti'nin arkasında yer alan geniş ve süslü bahçeler."
+                        },
+                        {
+                            "name": "Bargello Bahçeleri",
+                            "description": "Sanat eserleriyle çevrili huzurlu bir bahçe alanı."
+                        },
+                        {
+                            "name": "Fiesole",
+                            "description": "Floransa'ya yakın, antik Roma kalıntıları ve doğal manzaralar sunan kasaba."
+                        }
+                    ]
+                },
+                {
+                    "name": "Lezzet Durakları",
+                    "description": "Floransa'nın ünlü yemekleri ve restoranları.",
+                    "children": [
+                        {
+                            "name": "Trattoria Mario",
+                            "description": "Yerel Floransa mutfağını tadabileceğiniz popüler bir restoran."
+                        },
+                        {
+                            "name": "Mercato Centrale",
+                            "description": "Taze yiyecekler ve yerel lezzetlerin bulunduğu büyük bir pazar."
+                        },
+                        {
+                            "name": "Gelateria La Carraia",
+                            "description": "Lezzetli İtalyan dondurmaları ile ünlü mekan."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Milano",
+            "description": "İtalya'nın moda başkenti, modern yaşam tarzı ve tarihi yapılarıyla bilinir.",
+            "children": [
+                {
+                    "name": "Moda ve Alışveriş",
+                    "description": "Milano'nun ünlü alışveriş caddeleri ve moda etkinlikleri.",
+                    "children": [
+                        {
+                            "name": "Quadrilatero d'Oro (Altın Dörtgen)",
+                            "description": "Lüks butiklerin ve tasarımcı mağazalarının bulunduğu prestijli alışveriş bölgesi."
+                        },
+                        {
+                            "name": "Galleria Vittorio Emanuele II",
+                            "description": "İkonik alışveriş merkezi, tarihi mimarisi ve lüks mağazaları ile ünlüdür."
+                        },
+                        {
+                            "name": "Via Montenapoleone",
+                            "description": "Milano'nun en ünlü alışveriş caddelerinden biri, yüksek moda markalarını barındırır."
+                        }
+                    ]
+                },
+                {
+                    "name": "Tarihi Yapılar",
+                    "description": "Milano'nun zengin tarihi ve mimari mirası.",
+                    "children": [
+                        {
+                            "name": "Duomo di Milano",
+                            "description": "Gotik mimarinin en güzel örneklerinden biri olan katedrali."
+                        },
+                        {
+                            "name": "Sforza Kalesi",
+                            "description": "15. yüzyıldan kalma tarihi bir kale, müzeleri barındırır."
+                        },
+                        {
+                            "name": "Santa Maria delle Grazie",
+                            "description": "Leonardo da Vinci'nin ünlü 'Son Akşam Yemeği' tablosuna ev sahipliği yapar."
+                        }
+                    ]
+                },
+                {
+                    "name": "Sanat ve Kültür",
+                    "description": "Milano'nun sanat galerileri, müzeleri ve kültürel etkinlikleri.",
+                    "children": [
+                        {
+                            "name": "Pinacoteca di Brera",
+                            "description": "İtalyan sanatının önemli eserlerini barındıran müze."
+                        },
+                        {
+                            "name": "La Scala Opera Binası",
+                            "description": "Dünyaca ünlü opera binası ve konser alanı."
+                        },
+                        {
+                            "name": "Triennale di Milano",
+                            "description": "Modern sanat ve tasarım müzesi."
+                        }
+                    ]
+                },
+                {
+                    "name": "Parklar ve Doğa",
+                    "description": "Milano'nun yeşil alanları ve parkları.",
+                    "children": [
+                        {
+                            "name": "Sempione Parkı",
+                            "description": "Sforza Kalesi'nin arkasında yer alan geniş ve huzurlu park."
+                        },
+                        {
+                            "name": "Giardini Pubblici Indro Montanelli",
+                            "description": "Şehir merkezinde bulunan tarihi bir park."
+                        },
+                        {
+                            "name": "Parco delle Cave",
+                            "description": "Doğa yürüyüşleri ve piknik için ideal büyük bir doğal alan."
+                        }
+                    ]
+                },
+                {
+                    "name": "Lezzet Durakları",
+                    "description": "Milano'nun ünlü yemekleri ve restoranları.",
+                    "children": [
+                        {
+                            "name": "Ristorante Cracco",
+                            "description": "Michelin yıldızlı, modern İtalyan mutfağı sunan restoran."
+                        },
+                        {
+                            "name": "Luini Panzerotti",
+                            "description": "Meşhur panzerotti'leriyle ünlü hızlı yemek noktası."
+                        },
+                        {
+                            "name": "Eataly Milano Smeraldo",
+                            "description": "Geniş İtalyan yiyecekleri ve restoranları sunan büyük bir yiyecek marketi."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Toskana",
+            "description": "Üzüm bağları, güzel kırsal alanları ve tarihi şehirleri ile ünlü bölge.",
+            "children": [
+                {
+                    "name": "Floransa ve Çevresi",
+                    "description": "Toskana'nın merkezi ve en ünlü şehirlerinden biri.",
+                    "children": [
+                        {
+                            "name": "Chianti Bölgesi",
+                            "description": "Üzüm bağları ve şarap üretimi ile tanınan bölge."
+                        },
+                        {
+                            "name": "Fiesole",
+                            "description": "Antik Roma kalıntıları ve doğal manzaralar sunan kasaba."
+                        }
+                    ]
+                },
+                {
+                    "name": "Siena",
+                    "description": "Ortaçağ mimarisi ve ünlü Palio at yarışları ile tanınır.",
+                    "children": [
+                        {
+                            "name": "Piazza del Campo",
+                            "description": "Siena'nın ana meydanı, Palio at yarışlarının yapıldığı yer."
+                        },
+                        {
+                            "name": "Siena Katedrali (Duomo di Siena)",
+                            "description": "Gotik mimarinin muhteşem bir örneği."
+                        },
+                        {
+                            "name": "Torre del Mangia",
+                            "description": "Meydanın yanındaki ünlü kule, harika şehir manzaraları sunar."
+                        }
+                    ]
+                },
+                {
+                    "name": "Pisa",
+                    "description": "Eğik Pisa Kulesi ile ünlüdür.",
+                    "children": [
+                        {
+                            "name": "Eğik Pisa Kulesi (Torre Pendente)",
+                            "description": "Dünyaca ünlü eğik kule, mimari bir harikadır."
+                        },
+                        {
+                            "name": "Piazza dei Miracoli",
+                            "description": "Kule, Katedral ve Vaftizhane'nin bulunduğu ünlü meydan."
+                        },
+                        {
+                            "name": "Battistero di San Giovanni",
+                            "description": "Dünyanın en büyük vaftizhanelerinden biri."
+                        }
+                    ]
+                },
+                {
+                    "name": "San Gimignano",
+                    "description": "Ortaçağ kuleleri ve tarihi sokakları ile ünlü bir kasaba.",
+                    "children": [
+                        {
+                            "name": "Kuleler",
+                            "description": "Şehirdeki birçok tarihi kule, UNESCO Dünya Mirası Listesi'nde."
+                        },
+                        {
+                            "name": "Collegiata di Santa Maria Assunta",
+                            "description": "Güzel fresklerle süslü tarihi katedral."
+                        },
+                        {
+                            "name": "Orto Botanico di San Gimignano",
+                            "description": "Bitki çeşitliliği ve huzurlu atmosfer sunan botanik bahçesi."
+                        }
+                    ]
+                },
+                {
+                    "name": "Lezzet Durakları",
+                    "description": "Toskana'nın ünlü yemekleri ve şarapları.",
+                    "children": [
+                        {
+                            "name": "Bistecca alla Fiorentina",
+                            "description": "Floransa'ya özgü büyük biftek yemeği."
+                        },
+                        {
+                            "name": "Chianti Şarap Turları",
+                            "description": "Bölgedeki şarap imalathanelerini ziyaret ederek şarap tadımı."
+                        },
+                        {
+                            "name": "Ribollita",
+                            "description": "Toskana'ya özgü geleneksel sebze çorbası."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Amalfi Kıyıları",
+            "description": "Görkemli deniz manzaraları, renkli kasabalar ve doğal güzellikler sunan kıyı şeridi.",
+            "children": [
+                {
+                    "name": "Positano",
+                    "description": "Renkli evleri ve dik yamaçları ile ünlü turistik kasaba.",
+                    "children": [
+                        {
+                            "name": "Spiaggia Grande",
+                            "description": "Popüler plaj, deniz sporları ve güneşlenme alanları."
+                        },
+                        {
+                            "name": "Chiesa di Santa Maria Assunta",
+                            "description": "Turkuaz mozaiklerle süslü ünlü kilise."
+                        },
+                        {
+                            "name": "Path of the Gods",
+                            "description": "Muhteşem manzaralar sunan yürüyüş parkuru."
+                        }
+                    ]
+                },
+                {
+                    "name": "Amalfi",
+                    "description": "Tarihî katedrali ve limanı ile bilinir.",
+                    "children": [
+                        {
+                            "name": "Amalfi Katedrali (Duomo di Amalfi)",
+                            "description": "Muhteşem mimarisi ve tarihi önemi ile ünlü katedral."
+                        },
+                        {
+                            "name": "Amalfi Limanı",
+                            "description": "Deniz turlarının başlangıç noktası, restoranlar ve mağazalar."
+                        },
+                        {
+                            "name": "Museo della Carta",
+                            "description": "Amalfi'nin kağıt üretim tarihini anlatan müze."
+                        }
+                    ]
+                },
+                {
+                    "name": "Ravello",
+                    "description": "Muhtişem bahçeleri ve sanat etkinlikleri ile tanınır.",
+                    "children": [
+                        {
+                            "name": "Villa Rufolo",
+                            "description": "Güzel bahçeleri ve etkileyici mimarisi ile ünlü villa."
+                        },
+                        {
+                            "name": "Villa Cimbrone",
+                            "description": "Muhteşem deniz manzaraları sunan tarihi villa ve bahçeler."
+                        },
+                        {
+                            "name": "Ravello Festival",
+                            "description": "Yaz aylarında düzenlenen uluslararası müzik ve sanat festivali."
+                        }
+                    ]
+                },
+                {
+                    "name": "Lezzet Durakları",
+                    "description": "Amalfi Kıyıları'nın ünlü yemekleri ve restoranları.",
+                    "children": [
+                        {
+                            "name": "Seafood Restaurants",
+                            "description": "Taze deniz ürünleri sunan birçok restoran."
+                        },
+                        {
+                            "name": "Limoncello Tadımı",
+                            "description": "Bölgenin ünlü limon likörünü deneme fırsatı."
+                        },
+                        {
+                            "name": "Scialatielli ai Frutti di Mare",
+                            "description": "Amalfi'ye özgü deniz ürünlü makarna yemeği."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Napoli ve Pompeii",
+            "description": "Zengin tarihi ve lezzetli mutfağı ile ünlü Napoli ile, antik Pompeii kalıntılarını keşfetme imkanı sunar.",
+            "children": [
+                {
+                    "name": "Napoli",
+                    "description": "Canlı atmosferi, tarihi yapıları ve ünlü mutfağı ile bilinir.",
+                    "children": [
+                        {
+                            "name": "Napoli Katedrali (Duomo di Napoli)",
+                            "description": "San Gennaro Katedrali, Napoli'nin en önemli dini yapılarından biridir."
+                        },
+                        {
+                            "name": "Spaccanapoli",
+                            "description": "Napoli'nin tarihi ve kültürel merkezi olan dar sokak."
+                        },
+                        {
+                            "name": "Castel dell'Ovo",
+                            "description": "Deniz kenarında yer alan tarihi kale."
+                        }
+                    ]
+                },
+                {
+                    "name": "Pompeii",
+                    "description": "Vezüv Yanardağı'nın patlamasıyla yok olan antik Roma kenti.",
+                    "children": [
+                        {
+                            "name": "Antik Tiyatro",
+                            "description": "Pompeii'nin en büyük tiyatrosu, iyi korunmuş yapıları ile dikkat çeker."
+                        },
+                        {
+                            "name": "Villa of the Mysteries",
+                            "description": "Ünlü fresklerle süslü antik villa."
+                        },
+                        {
+                            "name": "Forum",
+                            "description": "Pompeii'nin merkezi ticaret ve sosyal alanı."
+                        }
+                    ]
+                },
+                {
+                    "name": "Vezüv Yanardağı",
+                    "description": "Aktif yanardağ, tırmanış ve doğal güzellikler sunar.",
+                    "children": [
+                        {
+                            "name": "Vezüv Krateri",
+                            "description": "Yanardağın tepesine yürüyüş yaparak krateri keşfetme imkanı."
+                        },
+                        {
+                            "name": "Pompeius Park",
+                            "description": "Vezüv çevresinde doğa yürüyüşleri ve piknik alanları."
+                        },
+                        {
+                            "name": "Gezi Turları",
+                            "description": "Vezüv ve Pompeii'yi kapsayan rehberli turlar."
+                        }
+                    ]
+                },
+                {
+                    "name": "Lezzet Durakları",
+                    "description": "Napoli'nın ünlü yemekleri ve restoranları.",
+                    "children": [
+                        {
+                            "name": "Pizza Napoletana",
+                            "description": "Dünya çapında ünlü Napoli pizzası, otantik fırınlarda tadılabilir."
+                        },
+                        {
+                            "name": "Sfogliatella",
+                            "description": "Napoli'ye özgü tatlı, gevrek hamur ve ricotta dolgulu."
+                        },
+                        {
+                            "name": "Neapolitan Coffee",
+                            "description": "Kaliteli kahve dükkanlarında lezzetli İtalyan kahveleri."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Cinque Terre",
+            "description": "Beş renkli köyden oluşan, muhteşem deniz manzaraları ve yürüyüş parkurları ile ünlü bölge.",
+            "children": [
+                {
+                    "name": "Monterosso al Mare",
+                    "description": "En büyük köy, plajları ve tarihi binaları ile bilinir.",
+                    "children": [
+                        {
+                            "name": "Spiaggia Grande",
+                            "description": "Bölgenin en büyük ve en popüler plajı."
+                        },
+                        {
+                            "name": "San Giovanni Battista Kilisesi",
+                            "description": "Monterosso'nun tarihi kilisesi."
+                        },
+                        {
+                            "name": "Fosso dei Cavallotti",
+                            "description": "Doğa yürüyüşleri ve deniz manzaraları sunan bölge."
+                        }
+                    ]
+                },
+                {
+                    "name": "Vernazza",
+                    "description": "Pitoresk limanı ve renkli evleri ile ünlü.",
+                    "children": [
+                        {
+                            "name": "Vernazza Limanı",
+                            "description": "Deniz kenarında güzel yürüyüş yolları ve restoranlar."
+                        },
+                        {
+                            "name": "Castello Doria",
+                            "description": "Vernazza'nın tarihi kalesi, harika manzaralar sunar."
+                        },
+                        {
+                            "name": "Santa Margherita di Antiochia Kilisesi",
+                            "description": "Pitoresk bir katedral, şehrin simgelerinden biri."
+                        }
+                    ]
+                },
+                {
+                    "name": "Manarola",
+                    "description": "Muhteşem manzaralar ve şarap üretimi ile tanınır.",
+                    "children": [
+                        {
+                            "name": "Manarola Limanı",
+                            "description": "Renkli evlerle çevrili güzel bir liman."
+                        },
+                        {
+                            "name": "Via dell'Amore",
+                            "description": "Manarola ile Riomaggiore arasında uzanan ünlü yürüyüş yolu."
+                        },
+                        {
+                            "name": "Şarap Tadımı",
+                            "description": "Yerel şarap imalathanelerinde şarap tadımı yapma imkanı."
+                        }
+                    ]
+                },
+                {
+                    "name": "Riomaggiore",
+                    "description": "Canlı gece hayatı ve tarihi yapıları ile ünlü.",
+                    "children": [
+                        {
+                            "name": "Via Colombo",
+                            "description": "Riomaggiore'nin ana alışveriş caddesi, dükkanlar ve kafeler."
+                        },
+                        {
+                            "name": "Church of San Giovanni Battista",
+                            "description": "Riomaggiore'nin tarihi kilisesi."
+                        },
+                        {
+                            "name": "Manifattura di Vino",
+                            "description": "Yerel şarap üretim tesislerini ziyaret etme imkanı."
+                        }
+                    ]
+                },
+                {
+                    "name": "Corniglia",
+                    "description": "Diğer köylere göre daha sakin, tepe üzerinde konumlanmış kasaba.",
+                    "children": [
+                        {
+                            "name": "Corniglia Beach",
+                            "description": "Sessiz ve huzurlu plaj alanı."
+                        },
+                        {
+                            "name": "Lardarina",
+                            "description": "Kasabanın ana girişinde yer alan tarihi taş merdiven."
+                        },
+                        {
+                            "name": "Doria Castle",
+                            "description": "Corniglia'nın tarihi kalesi, panoramik manzaralar sunar."
+                        }
+                    ]
+                },
+                {
+                    "name": "Lezzet Durakları",
+                    "description": "Cinque Terre'nin ünlü yemekleri ve restoranları.",
+                    "children": [
+                        {
+                            "name": "Pesto Genovese",
+                            "description": "Bölgenin meşhur fesleğenli sosu ile hazırlanan yemekler."
+                        },
+                        {
+                            "name": "Focaccia",
+                            "description": "İtalyan ekmeği, çeşitli malzemelerle hazırlanır."
+                        },
+                        {
+                            "name": "Seafood Specialties",
+                            "description": "Taze deniz ürünleriyle hazırlanan yerel lezzetler."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Sicilya",
+            "description": "Zengin tarihi, muhteşem plajları ve aktif yanardağları ile ünlü İtalya'nın en büyük adası.",
+            "children": [
+                {
+                    "name": "Palermo",
+                    "description": "Sicilya'nın başkenti, tarihi ve kültürel zenginlikleri ile bilinir.",
+                    "children": [
+                        {
+                            "name": "Palermo Katedrali",
+                            "description": "Farklı mimari stillerin birleştiği tarihi katedral."
+                        },
+                        {
+                            "name": "Normanlar Sarayı",
+                            "description": "UNESCO Dünya Mirası Listesi'nde yer alan tarihi saray."
+                        },
+                        {
+                            "name": "Teatro Massimo",
+                            "description": "İtalya'nın en büyük opera binası."
+                        }
+                    ]
+                },
+                {
+                    "name": "Etna Yanardağı",
+                    "description": "Avrupa'nın en aktif yanardağı, tırmanış ve doğa yürüyüşleri için ideal.",
+                    "children": [
+                        {
+                            "name": "Etna Tırmanış Turları",
+                            "description": "Rehberli tırmanışlar ile krateri keşfetme imkanı."
+                        },
+                        {
+                            "name": "Silvestri Kraterleri",
+                            "description": "Etna'nın etrafındaki çeşitli kraterler ve lav akıntıları."
+                        },
+                        {
+                            "name": "Etna Parkı",
+                            "description": "Doğa yürüyüşleri ve piknik alanları sunan geniş doğal park."
+                        }
+                    ]
+                },
+                {
+                    "name": "Taormina",
+                    "description": "Muhteşem deniz manzaraları ve tarihi tiyatrosu ile ünlü turistik kasaba.",
+                    "children": [
+                        {
+                            "name": "Antik Tiyatro (Teatro Antico di Taormina)",
+                            "description": "Antik Roma tiyatrosu, muhteşem Etna ve deniz manzaraları sunar."
+                        },
+                        {
+                            "name": "Isola Bella",
+                            "description": "Küçük bir ada ve doğa rezervi, plaj ve yüzme alanları."
+                        },
+                        {
+                            "name": "Corso Umberto",
+                            "description": "Kasabanın ana alışveriş caddesi, dükkanlar ve kafeler."
+                        }
+                    ]
+                },
+                {
+                    "name": "Syracuse (Siracusa)",
+                    "description": "Zengin tarihi ve arkeolojik alanları ile ünlü şehir.",
+                    "children": [
+                        {
+                            "name": "Neapolis Arkeoloji Parkı",
+                            "description": "Antik Yunan tiyatrosu, Roma amfitiyatrosu ve Ortodoks katedrali."
+                        },
+                        {
+                            "name": "Ortigia Adası",
+                            "description": "Syracuse'un tarihi merkezi, dar sokaklar ve tarihi yapılar."
+                        },
+                        {
+                            "name": "Syracuse Katedrali",
+                            "description": "Eski Yunan tapınağının üzerine inşa edilmiş muhteşem katedral."
+                        }
+                    ]
+                },
+                {
+                    "name": "Lezzet Durakları",
+                    "description": "Sicilya'nın ünlü yemekleri ve restoranları.",
+                    "children": [
+                        {
+                            "name": "Arancini",
+                            "description": "Sicilya'ya özgü kızarmış pirinç topları, çeşitli iç harçlarla."
+                        },
+                        {
+                            "name": "Cannoli",
+                            "description": "Tatlı rulo hamur dolması, ricotta dolgulu."
+                        },
+                        {
+                            "name": "Seafood Specialties",
+                            "description": "Taze deniz ürünleriyle hazırlanan yerel lezzetler."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Sardinya",
+            "description": "Beyaz kumlu plajları, berrak denizi ve zengin kültürel mirası ile ünlü İtalya'nın ikinci büyük adası.",
+            "children": [
+                {
+                    "name": "Costa Smeralda",
+                    "description": "Lüks tatil köyleri, muhteşem plajlar ve gece hayatı ile ünlü bölge.",
+                    "children": [
+                        {
+                            "name": "Porto Cervo",
+                            "description": "Lüks yat limanı, butik mağazalar ve lüks restoranlar."
+                        },
+                        {
+                            "name": "Spiaggia del Principe",
+                            "description": "Berrak suları ve beyaz kumları ile ünlü plaj."
+                        },
+                        {
+                            "name": "Capriccioli",
+                            "description": "Aileler için uygun, sakin ve güzel bir plaj."
+                        }
+                    ]
+                },
+                {
+                    "name": "Cagliari",
+                    "description": "Sardinya'nın başkenti, tarihi ve kültürel zenginlikleri ile bilinir.",
+                    "children": [
+                        {
+                            "name": "Cagliari Kalesi (Castello)",
+                            "description": "Şehrin tarihi merkezi, dar sokaklar ve eski binalarla dolu."
+                        },
+                        {
+                            "name": "Poetto Plajı",
+                            "description": "Uzun ve güzel bir plaj, deniz sporları için ideal."
+                        },
+                        {
+                            "name": "Bastione di Saint Remy",
+                            "description": "Muhteşem şehir manzaraları sunan tarihi yapı."
+                        }
+                    ]
+                },
+                {
+                    "name": "Alghero",
+                    "description": "Katalan etkisi taşıyan tarihi şehir, güzel plajları ve dar sokakları ile ünlü.",
+                    "children": [
+                        {
+                            "name": "Bastione di Alghero",
+                            "description": "Şehrin sembolik surları, panoramik deniz manzaraları."
+                        },
+                        {
+                            "name": "Neptün Mağarası (Grotta di Nettuno)",
+                            "description": "Deniz mağarası, tekne turları ile erişilebilir."
+                        },
+                        {
+                            "name": "Lia Lake",
+                            "description": "Doğa yürüyüşleri ve piknik için ideal sakin bir göl."
+                        }
+                    ]
+                },
+                {
+                    "name": "Costa Verde",
+                    "description": "Vahşi doğası, kum tepeleri ve doğal parkları ile bilinen bölge.",
+                    "children": [
+                        {
+                            "name": "Piscinas Plajı",
+                            "description": "Sardinya'nın en uzun plajlarından biri, doğal kum tepeleri ile ünlü."
+                        },
+                        {
+                            "name": "Montiferru",
+                            "description": "Doğa yürüyüşleri ve bisiklet turları için ideal bölge."
+                        },
+                        {
+                            "name": "Is Arutas",
+                            "description": "Beyaz kuvars kumları ile ünlü, eşsiz plaj."
+                        }
+                    ]
+                },
+                {
+                    "name": "Lezzet Durakları",
+                    "description": "Sardinya'nın ünlü yemekleri ve restoranları.",
+                    "children": [
+                        {
+                            "name": "Porceddu",
+                            "description": "Fırınlanmış domuz eti, Sardinya'nın meşhur yemeği."
+                        },
+                        {
+                            "name": "Seadas",
+                            "description": "Tatlı bir hamur işi, ricotta dolgulu ve bal ile servis edilir."
+                        },
+                        {
+                            "name": "Fregola",
+                            "description": "Sardinya'ya özgü küçük pirinç topları, çeşitli soslarla servis edilir."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Turkuaz Plajları ve Doğal Güzellikler",
+            "description": "İtalya'nın çeşitli bölgelerinde bulunan muhteşem plajlar ve doğal alanlar.",
+            "children": [
+                {
+                    "name": "Lago di Como",
+                    "description": "Göz alıcı göl manzaraları, lüks villalar ve doğal güzellikler.",
+                    "children": [
+                        {
+                            "name": "Bellagio",
+                            "description": "Gölün ortasında yer alan romantik kasaba."
+                        },
+                        {
+                            "name": "Villa Carlotta",
+                            "description": "Güzel bahçeleri ve sanat koleksiyonları ile ünlü villa."
+                        },
+                        {
+                            "name": "Varenna",
+                            "description": "Şirin sokakları ve güzel deniz manzaraları sunan kasaba."
+                        }
+                    ]
+                },
+                {
+                    "name": "Lago di Garda",
+                    "description": "İtalya'nın en büyük gölü, su sporları ve doğal parkları ile ünlü.",
+                    "children": [
+                        {
+                            "name": "Sirmione",
+                            "description": "Güzellikleri ve tarihi yapıları ile ünlü şirin kasaba."
+                        },
+                        {
+                            "name": "Malcesine",
+                            "description": "Kalesi ve Monte Baldo teleferiği ile tanınan kasaba."
+                        },
+                        {
+                            "name": "Riva del Garda",
+                            "description": "Su sporları ve doğal güzellikler sunan canlı bir kasaba."
+                        }
+                    ]
+                },
+                {
+                    "name": "Cinque Terre",
+                    "description": "Beş renkli köyden oluşan, muhteşem deniz manzaraları ve yürüyüş parkurları ile ünlü bölge.",
+                    "children": [
+                        {
+                            "name": "Monterosso al Mare",
+                            "description": "En büyük köy, plajları ve tarihi binaları ile bilinir."
+                        },
+                        {
+                            "name": "Vernazza",
+                            "description": "Pitoresk limanı ve renkli evleri ile ünlü."
+                        },
+                        {
+                            "name": "Manarola",
+                            "description": "Muhteşem manzaralar ve şarap üretimi ile tanınır."
+                        },
+                        {
+                            "name": "Riomaggiore",
+                            "description": "Canlı gece hayatı ve tarihi yapıları ile ünlü."
+                        },
+                        {
+                            "name": "Corniglia",
+                            "description": "Diğer köylere göre daha sakin, tepe üzerinde konumlanmış kasaba."
+                        }
+                    ]
+                },
+                {
+                    "name": "Lezzet Durakları",
+                    "description": "İtalya'nın doğal güzelliklerinde keyifli yemek deneyimleri.",
+                    "children": [
+                        {
+                            "name": "Balık ve Deniz Ürünleri",
+                            "description": "Taze deniz ürünleri sunan plaj restoranları."
+                        },
+                        {
+                            "name": "Yerel Şaraplar",
+                            "description": "Doğal bölgelerde üretilen yerel şarapların tadımı."
+                        },
+                        {
+                            "name": "Piknik Alanları",
+                            "description": "Doğanın içinde keyifli yemek molaları için ideal alanlar."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Torino",
+            "description": "Endüstri ve sanatı harmanlayan, tarihi ve kültürel zenginlikleri ile bilinen şehir.",
+            "children": [
+                {
+                    "name": "Tarihi Yapılar",
+                    "description": "Torino'nun ikonik tarihi ve mimari yapıları.",
+                    "children": [
+                        {
+                            "name": "Mole Antonelliana",
+                            "description": "Şehrin simgesi olan yüksek yapı, sinema müzesi ile ünlüdür."
+                        },
+                        {
+                            "name": "Palazzo Reale",
+                            "description": "Eski kraliyet sarayı, güzel bahçeler ve müzeler içerir."
+                        },
+                        {
+                            "name": "Basilica di Superga",
+                            "description": "Şehrin tepelerinde yer alan tarihi bazilika."
+                        }
+                    ]
+                },
+                {
+                    "name": "Sanat ve Kültür",
+                    "description": "Torino'nun sanat galerileri, müzeleri ve kültürel etkinlikleri.",
+                    "children": [
+                        {
+                            "name": "Egyptian Museum (Museo Egizio)",
+                            "description": "Dünyanın en önemli Mısır müzelerinden biri."
+                        },
+                        {
+                            "name": "GAM - Galleria Civica d'Arte Moderna e Contemporanea",
+                            "description": "Modern ve çağdaş sanat eserlerinin sergilendiği müze."
+                        },
+                        {
+                            "name": "Lingotto",
+                            "description": "Eski Fiat fabrikasının dönüştürülmüş kültürel merkez."
+                        }
+                    ]
+                },
+                {
+                    "name": "Parklar ve Doğa",
+                    "description": "Torino'nun yeşil alanları ve parkları.",
+                    "children": [
+                        {
+                            "name": "Parco del Valentino",
+                            "description": "Şehrin en büyük parkı, botanik bahçeleri ve tarihi yapılar."
+                        },
+                        {
+                            "name": "Parco La Mandria",
+                            "description": "Doğa yürüyüşleri ve bisiklet parkurları sunan geniş park."
+                        },
+                        {
+                            "name": "Botanical Garden of Turin",
+                            "description": "Çeşitli bitki türlerinin sergilendiği botanik bahçesi."
+                        }
+                    ]
+                },
+                {
+                    "name": "Lezzet Durakları",
+                    "description": "Torino'nun ünlü yemekleri ve restoranları.",
+                    "children": [
+                        {
+                            "name": "Bagna Cauda",
+                            "description": "Sicilian mutfağına özgü sıcak sos ve sebzelerle servis edilir."
+                        },
+                        {
+                            "name": "Gianduiotto",
+                            "description": "Torino'ya özgü çikolata lezzeti."
+                        },
+                        {
+                            "name": "Eataly Torino",
+                            "description": "Geniş İtalyan yiyecekleri ve restoranları sunan büyük bir yiyecek marketi."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Bologna",
+            "description": "Lezzet durakları, üniversitesi ve tarihi yapıları ile bilinen dinamik şehir.",
+            "children": [
+                {
+                    "name": "Tarihi Yapılar",
+                    "description": "Bologna'nın ikonik tarihi ve mimari yapıları.",
+                    "children": [
+                        {
+                            "name": "Piazza Maggiore",
+                            "description": "Şehrin ana meydanı, Basilica di San Petronio ve diğer önemli yapılar."
+                        },
+                        {
+                            "name": "Due Torri (İki Kule)",
+                            "description": "Asinelli ve Garisenda kuleleri, şehrin simgelerinden."
+                        },
+                        {
+                            "name": "Basilica di San Petronio",
+                            "description": "Gotik mimarinin muhteşem bir örneği."
+                        }
+                    ]
+                },
+                {
+                    "name": "Üniversite ve Eğitim",
+                    "description": "Bologna Üniversitesi, dünyanın en eski üniversitelerinden biri.",
+                    "children": [
+                        {
+                            "name": "Archiginnasio di Bologna",
+                            "description": "Eski üniversite binası, Teatro Anatomico ve kütüphane."
+                        },
+                        {
+                            "name": "Università di Bologna",
+                            "description": "Geniş kampüsler ve modern eğitim tesisleri."
+                        },
+                        {
+                            "name": "Cappella Comunale del Cambio",
+                            "description": "Üniversite ile bağlantılı tarihi kapella."
+                        }
+                    ]
+                },
+                {
+                    "name": "Lezzet Durakları",
+                    "description": "Bologna'nın ünlü yemekleri ve restoranları.",
+                    "children": [
+                        {
+                            "name": "Tagliatelle al Ragù (Bolognese)",
+                            "description": "Bologna'ya özgü makarna yemeği."
+                        },
+                        {
+                            "name": "Mortadella",
+                            "description": "Ünlü Bologna salamı."
+                        },
+                        {
+                            "name": "Mercato di Mezzo",
+                            "description": "Yerel yiyecekler ve lezzetleri keşfetmek için ideal pazar."
+                        }
+                    ]
+                },
+                {
+                    "name": "Kültürel Etkinlikler",
+                    "description": "Bologna'da düzenlenen çeşitli kültürel ve sanatsal etkinlikler.",
+                    "children": [
+                        {
+                            "name": "Bologna Film Festival",
+                            "description": "Uluslararası film festivali, sinema severler için ideal."
+                        },
+                        {
+                            "name": "Fiera di Bologna",
+                            "description": "Ticaret fuarları ve sergiler, çeşitli endüstrilere ev sahipliği yapar."
+                        },
+                        {
+                            "name": "Musica in Piazza",
+                            "description": "Açık hava konserleri ve müzik etkinlikleri."
+                        }
+                    ]
+                },
+                {
+                    "name": "Parklar ve Yeşil Alanlar",
+                    "description": "Bologna'nın huzurlu parkları ve dinlenme alanları.",
+                    "children": [
+                        {
+                            "name": "Giardini Margherita",
+                            "description": "Şehrin en büyük parkı, göletler ve yürüyüş yolları ile."
+                        },
+                        {
+                            "name": "Parco della Montagnola",
+                            "description": "Tarihi anıtlarla çevrili, dinlenme ve piknik alanları."
+                        },
+                        {
+                            "name": "Botanical Garden of Bologna",
+                            "description": "Çeşitli bitki türlerinin sergilendiği botanik bahçesi."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
