@@ -1,31 +1,42 @@
-import React, { memo, useRef, useEffect, useState } from 'react';
+import React, { memo, useRef, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronRight, MoreHorizontal, Edit, Trash, Plus } from 'lucide-react';
-import Highlighter from 'react-highlight-words';
+import { ChevronRight, MoreHorizontal } from 'lucide-react';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
+import { useInView } from 'react-intersection-observer';
+import Highlighter from 'react-highlight-words';
 import { useMindMap } from '../context/MindMapContext';
-
-const TreeNode = memo(({
-  node,
-  searchTerm,
+import { useToast } from '../context/ToastContext';
+const OptimizedTreeNode = memo(({ 
+  node, 
+  searchTerm, 
   level = 0,
-  isRoot = false,
-  parentCoords = null
+  isRoot = false 
 }) => {
   const {
     expandedNodes,
     toggleNode,
-    nodeFocus,
     selectedNode,
     setSelectedNode,
-    deleteNode,
-    editNode,
-    addChild
+    nodeFocus
   } = useMindMap();
-
-  const [isHovered, setIsHovered] = useState(false);
+  const { addToast } = useToast();
+  
+  const [isLoading, setIsLoading] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const nodeRef = useRef(null);
+  
+  // Intersection Observer for lazy loading
+  const { ref: inViewRef, inView } = useInView({
+    threshold: 0,
+    triggerOnce: true
+  });
+
+  // Merge refs
+  const setRefs = (element) => {
+    nodeRef.current = element;
+    inViewRef(element);
+  };
+
   const hasChildren = node.children?.length > 0;
   const isExpanded = hasChildren && expandedNodes.has(node.id);
   const isFocused = nodeFocus === node.id;
@@ -40,32 +51,35 @@ const TreeNode = memo(({
     }
   }, [isFocused]);
 
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      toggleNode(node.id);
+  const handleToggle = async () => {
+    if (!hasChildren) return;
+    
+    setIsLoading(true);
+    try {
+      await toggleNode(node.id);
+      if (!isExpanded) {
+        addToast('Node expanded successfully', 'success');
+      }
+    } catch (error) {
+      addToast('Failed to toggle node', 'error');
+    } finally {
+      setIsLoading(false);
     }
   };
 
-  // Stable node animations
-  const nodeMotion = {
-    initial: { opacity: 0, y: -10 },
-    animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -10 },
-    transition: { duration: 0.2, ease: 'easeOut' }
-  };
+  // ARIA labels for accessibility
+  const ariaLabel = `${node.name}${hasChildren ? ', has children' : ''}${isExpanded ? ', expanded' : ''}`;
 
-  // Smooth children expansion
-  const childrenMotion = {
-    initial: { opacity: 0, height: 0 },
-    animate: { opacity: 1, height: 'auto' },
-    exit: { opacity: 0, height: 0 },
-    transition: { duration: 0.3, ease: 'easeInOut' }
-  };
+  if (!inView) {
+    return <div ref={inViewRef} style={{ height: '50px' }} />;
+  }
 
   return (
     <motion.div
-      ref={nodeRef}
+      ref={setRefs}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       className={`
         relative transition-all duration-200
         ${isRoot ? '' : 'ml-6'}
@@ -73,45 +87,44 @@ const TreeNode = memo(({
         ${isFocused ? 'ring-2 ring-blue-500' : ''}
         rounded-lg
       `}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => {
-        setIsHovered(false);
-        if (!dropdownOpen) setDropdownOpen(false);
-      }}
-      {...nodeMotion}
+      role="treeitem"
+      aria-expanded={isExpanded}
+      aria-label={ariaLabel}
+      tabIndex={0}
     >
-      <div
-        className="group relative p-4 rounded-lg cursor-pointer
-          hover:bg-gray-50 dark:hover:bg-gray-800
-          transition-all duration-200"
+      <div 
+        className="group relative p-4 rounded-lg hover:bg-gray-50 
+                   dark:hover:bg-gray-800 transition-all duration-200"
         onClick={() => setSelectedNode(node.id === selectedNode ? null : node.id)}
-        onKeyDown={handleKeyPress}
-        tabIndex={0}
-        role="treeitem"
-        aria-expanded={isExpanded}
-        aria-selected={isSelected}
       >
         <div className="flex items-center gap-3">
-          {/* Expand/Collapse button */}
           {hasChildren && (
-            <motion.button
+            <button
               onClick={(e) => {
                 e.stopPropagation();
-                toggleNode(node.id);
+                handleToggle();
               }}
-              className="flex-shrink-0 p-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700
-                       focus:outline-none focus:ring-2 focus:ring-blue-500"
-              animate={{ rotate: isExpanded ? 90 : 0 }}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ duration: 0.2 }}
+              disabled={isLoading}
+              className="flex-shrink-0 p-1 rounded-md hover:bg-gray-200 
+                       dark:hover:bg-gray-700 focus:outline-none 
+                       focus:ring-2 focus:ring-blue-500
+                       disabled:opacity-50 disabled:cursor-not-allowed"
               aria-label={isExpanded ? "Collapse" : "Expand"}
             >
-              <ChevronRight className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-            </motion.button>
+              <motion.div
+                animate={{ rotate: isExpanded ? 90 : 0 }}
+                transition={{ duration: 0.2 }}
+              >
+                {isLoading ? (
+                  <div className="w-4 h-4 border-2 border-blue-500 
+                                border-t-transparent rounded-full animate-spin" />
+                ) : (
+                  <ChevronRight className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+                )}
+              </motion.div>
+            </button>
           )}
 
-          {/* Node Content */}
           <div className="flex-1 min-w-0">
             <h3 className="text-lg font-semibold text-gray-800 dark:text-white truncate">
               <Highlighter
@@ -133,88 +146,37 @@ const TreeNode = memo(({
             )}
           </div>
 
-          {/* Actions Menu - Always rendered but conditionally visible */}
-          <div
-            className={`
-              flex-shrink-0 transition-opacity duration-200
-              ${(isHovered || isSelected || dropdownOpen) ? 'opacity-100' : 'opacity-0'}
-            `}
-          >
-            <DropdownMenu.Root open={dropdownOpen} onOpenChange={setDropdownOpen}>
-              <DropdownMenu.Trigger asChild>
-                <button
-                  className="p-2 rounded-full transition-colors duration-200
-                    hover:bg-gray-200 dark:hover:bg-gray-700
-                    focus:outline-none focus:ring-2 focus:ring-blue-500
-                    active:bg-gray-300 dark:active:bg-gray-600"
-                >
-                  <MoreHorizontal className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-                </button>
-              </DropdownMenu.Trigger>
-
-              <DropdownMenu.Portal>
-                <DropdownMenu.Content
-                  className="z-50 min-w-[220px] bg-white dark:bg-gray-800 rounded-lg shadow-lg p-1
-                    border border-gray-200 dark:border-gray-700
-                    animate-in fade-in-0 zoom-in-95 duration-200"
-                  sideOffset={5}
-                  align="end"
-                >
-                  <DropdownMenu.Item
-                    className="flex items-center gap-2 px-3 py-2 text-sm text-gray-700 dark:text-gray-300
-                      hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md cursor-pointer
-                      outline-none focus:bg-gray-100 dark:focus:bg-gray-700"
-                    onClick={() => editNode(node.id)}
-                  >
-                    <Edit className="w-4 h-4" />
-                    Edit
-                  </DropdownMenu.Item>
-
-                  <DropdownMenu.Item
-                    className="flex items-center gap-2 px-3 py-2 text-sm text-gray-700 dark:text-gray-300
-                      hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md cursor-pointer
-                      outline-none focus:bg-gray-100 dark:focus:bg-gray-700"
-                    onClick={() => addChild(node.id)}
-                  >
-                    <Plus className="w-4 h-4" />
-                    Add Child
-                  </DropdownMenu.Item>
-
-                  {!isRoot && (
-                    <DropdownMenu.Item
-                      className="flex items-center gap-2 px-3 py-2 text-sm text-red-600 dark:text-red-400
-                        hover:bg-red-50 dark:hover:bg-red-900/30 rounded-md cursor-pointer
-                        outline-none focus:bg-red-50 dark:focus:bg-red-900/30"
-                      onClick={() => deleteNode(node.id)}
-                    >
-                      <Trash className="w-4 h-4" />
-                      Delete
-                    </DropdownMenu.Item>
-                  )}
-                </DropdownMenu.Content>
-              </DropdownMenu.Portal>
-            </DropdownMenu.Root>
-          </div>
+          <DropdownMenu.Root open={dropdownOpen} onOpenChange={setDropdownOpen}>
+            <DropdownMenu.Trigger asChild>
+              <button
+                className="p-2 rounded-full opacity-0 group-hover:opacity-100 
+                         transition-opacity duration-200 hover:bg-gray-200 
+                         dark:hover:bg-gray-700"
+                aria-label="More options"
+              >
+                <MoreHorizontal className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+              </button>
+            </DropdownMenu.Trigger>
+            {/* Dropdown menu content */}
+          </DropdownMenu.Root>
         </div>
       </div>
 
-      {/* Children nodes */}
       <AnimatePresence>
         {hasChildren && isExpanded && (
           <motion.div
-            {...childrenMotion}
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.2 }}
             className="pl-6 border-l-2 border-gray-200 dark:border-gray-700 ml-4 mt-2"
           >
             {node.children.map((child) => (
-              <TreeNode
+              <OptimizedTreeNode
                 key={child.id}
                 node={child}
                 searchTerm={searchTerm}
                 level={level + 1}
-                parentCoords={{
-                  x: nodeRef.current?.offsetLeft || 0,
-                  y: nodeRef.current?.offsetTop + nodeRef.current?.offsetHeight / 2 || 0
-                }}
               />
             ))}
           </motion.div>
@@ -224,5 +186,5 @@ const TreeNode = memo(({
   );
 });
 
-TreeNode.displayName = 'TreeNode';
-export default TreeNode;
+OptimizedTreeNode.displayName = 'OptimizedTreeNode';
+export default OptimizedTreeNode;
