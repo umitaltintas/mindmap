@@ -64,9 +64,9 @@ export const MiniMap = ({ data, zoomLevel }) => {
     <div
       ref={miniMapRef}
       className="fixed bottom-20 right-4 w-[200px] h-[150px] 
-                 bg-white dark:bg-gray-800 rounded-lg shadow-lg
-                 border border-gray-200 dark:border-gray-700
-                 overflow-hidden cursor-move"
+               bg-white dark:bg-gray-800 rounded-lg shadow-lg
+               border border-gray-200 dark:border-gray-700
+               overflow-hidden cursor-move hidden sm:block" // Hide on extra small screens
       onClick={handleClick}
     >
       <div className="absolute inset-0 p-2">

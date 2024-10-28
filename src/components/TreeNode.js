@@ -6,11 +6,11 @@ import { useInView } from 'react-intersection-observer';
 import Highlighter from 'react-highlight-words';
 import { useMindMap } from '../context/MindMapContext';
 import { useToast } from '../context/ToastContext';
-const OptimizedTreeNode = memo(({ 
-  node, 
-  searchTerm, 
+const OptimizedTreeNode = memo(({
+  node,
+  searchTerm,
   level = 0,
-  isRoot = false 
+  isRoot = false
 }) => {
   const {
     expandedNodes,
@@ -20,11 +20,11 @@ const OptimizedTreeNode = memo(({
     nodeFocus
   } = useMindMap();
   const { addToast } = useToast();
-  
+
   const [isLoading, setIsLoading] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const nodeRef = useRef(null);
-  
+
   // Intersection Observer for lazy loading
   const { ref: inViewRef, inView } = useInView({
     threshold: 0,
@@ -41,7 +41,7 @@ const OptimizedTreeNode = memo(({
   const isExpanded = hasChildren && expandedNodes.has(node.id);
   const isFocused = nodeFocus === node.id;
   const isSelected = selectedNode === node.id;
-
+  
   useEffect(() => {
     if (isFocused && nodeRef.current) {
       nodeRef.current.scrollIntoView({
@@ -51,9 +51,10 @@ const OptimizedTreeNode = memo(({
     }
   }, [isFocused]);
 
+
   const handleToggle = async () => {
     if (!hasChildren) return;
-    
+
     setIsLoading(true);
     try {
       await toggleNode(node.id);
@@ -91,11 +92,18 @@ const OptimizedTreeNode = memo(({
       aria-expanded={isExpanded}
       aria-label={ariaLabel}
       tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          handleToggle();
+        }
+      }}
     >
-      <div 
+      <div
         className="group relative p-4 rounded-lg hover:bg-gray-50 
                    dark:hover:bg-gray-800 transition-all duration-200"
         onClick={() => setSelectedNode(node.id === selectedNode ? null : node.id)}
+        role="button"
+        aria-pressed={isSelected}
       >
         <div className="flex items-center gap-3">
           {hasChildren && (

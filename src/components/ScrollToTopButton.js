@@ -1,7 +1,12 @@
-// src/components/ScrollToTopButton.js
 import React, { useState, useEffect } from 'react';
-import { ArrowUp } from 'react-feather';
-import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowUp } from 'lucide-react';
+
+const fadeIn = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: 20 },
+  transition: { duration: 0.2 }
+};
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,24 +32,19 @@ const ScrollToTopButton = () => {
   };
 
   return (
-    <AnimatePresence>
+    <>
       {isVisible && (
-        <motion.button
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.8 }}
+        <button
           onClick={scrollToTop}
           className="fixed bottom-8 right-8 p-3 rounded-full bg-blue-500 hover:bg-blue-600 
-                     text-white shadow-lg cursor-pointer transition-colors duration-200
-                     dark:bg-blue-600 dark:hover:bg-blue-700"
-          aria-label="Yukarı çık"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+                     text-white shadow-lg cursor-pointer transition-all duration-200
+                     dark:bg-blue-600 dark:hover:bg-blue-700 hover:scale-110 active:scale-90"
+          aria-label="Scroll to top"
         >
           <ArrowUp className="w-6 h-6" />
-        </motion.button>
+        </button>
       )}
-    </AnimatePresence>
+    </>
   );
 };
 

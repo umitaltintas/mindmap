@@ -25,4 +25,14 @@ yarn-debug.log*
 yarn-error.log*
 
 
+#png
+*.png
+*.PNG
+
+#jpg
+*.jpg
+*.JPG
+
+
+
 

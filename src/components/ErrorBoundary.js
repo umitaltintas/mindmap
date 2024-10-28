@@ -1,5 +1,7 @@
+// src/components/ErrorBoundary.js
 import React from 'react';
 import { AlertCircle, RefreshCw } from 'lucide-react';
+import { useToast } from '../context/ToastContext';
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -20,7 +22,7 @@ class ErrorBoundary extends React.Component {
       error,
       errorInfo
     });
-    
+
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
@@ -35,27 +37,23 @@ class ErrorBoundary extends React.Component {
   };
 
   render() {
+    const { addToast } = this.props; // Pass `addToast` via props or context
+
     if (this.state.hasError) {
+      addToast('An unexpected error occurred. Please reload the page.', 'error');
+
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 p-4">
           <div className="max-w-md w-full space-y-8 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
             <div className="text-center">
               <AlertCircle className="mx-auto h-12 w-12 text-red-500" />
               <h2 className="mt-6 text-3xl font-bold text-gray-900 dark:text-white">
-                Something went wrong
+                Oops! Something went wrong.
               </h2>
               <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-                {this.state.error?.message || 'An unexpected error occurred'}
+                We encountered an unexpected error. Please try reloading the page.
               </p>
             </div>
-
-            {process.env.NODE_ENV === 'development' && this.state.errorInfo && (
-              <div className="mt-4 p-4 bg-gray-100 dark:bg-gray-900 rounded-md overflow-auto">
-                <pre className="text-xs text-gray-700 dark:text-gray-300">
-                  {this.state.errorInfo.componentStack}
-                </pre>
-              </div>
-            )}
 
             <div className="mt-6 flex gap-4 justify-center">
               <button
@@ -74,7 +72,7 @@ class ErrorBoundary extends React.Component {
             </div>
 
             <p className="mt-4 text-xs text-center text-gray-500 dark:text-gray-400">
-              If this issue persists, please contact support
+              If the issue persists, please contact support.
             </p>
           </div>
         </div>

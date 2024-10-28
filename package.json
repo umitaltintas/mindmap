@@ -24,6 +24,7 @@
     "react-highlight-words": "^0.20.0",
     "react-intersection-observer": "^9.13.1",
     "react-scripts": "5.0.1",
+    "react-window": "^1.8.10",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

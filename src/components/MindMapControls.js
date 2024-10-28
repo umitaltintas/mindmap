@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Moon, Sun, ZoomIn, ZoomOut, 
+import {
+  Moon, Sun, ZoomIn, ZoomOut,
   Map, Download, Share, Camera,
   Maximize2, Minimize2, RotateCcw,
   ChevronDown, ChevronRight, Settings
@@ -70,8 +70,8 @@ const MindMapControls = () => {
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="flex items-center gap-2 p-2 bg-white/80 dark:bg-gray-800/80 
-                   backdrop-blur-lg rounded-lg shadow-lg"
+        className="hidden md:flex items-center gap-2 p-2 bg-white/80 dark:bg-gray-800/80 
+             backdrop-blur-lg rounded-lg shadow-lg"
       >
         <div className="flex items-center gap-2 border-r border-gray-200 dark:border-gray-700 pr-2">
           <ControlButton

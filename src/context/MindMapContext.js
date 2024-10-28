@@ -286,17 +286,24 @@ const MindMapProvider = ({ children }) => {
 
   // Export functionality
   const exportMindMap = useCallback(() => {
-    const exportData = {
-      data: mindMapData,
-      expandedNodes: Array.from(expandedNodes),
-      version: '1.0',
-      exportDate: new Date().toISOString(),
-    };
+    try {
+      // Export logic
+      const exportData = {
+        data: mindMapData,
+        expandedNodes: Array.from(expandedNodes),
+        version: '1.0',
+        exportDate: new Date().toISOString(),
+      };
 
-    const blob = new Blob([JSON.stringify(exportData, null, 2)], {
-      type: 'application/json',
-    });
-    saveAs(blob, 'mindmap-export.json');
+      const blob = new Blob([JSON.stringify(exportData, null, 2)], {
+        type: 'application/json',
+      });
+      saveAs(blob, 'mindmap-export.json');
+
+      addToast('Mind map exported successfully!', 'success');
+    } catch (error) {
+      addToast('Failed to export mind map.', 'error');
+    }
   }, [mindMapData, expandedNodes]);
 
   // Screenshot functionality
