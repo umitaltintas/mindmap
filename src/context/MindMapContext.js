@@ -89,8 +89,6 @@ const MindMapProvider = ({ children }) => {
 
   // New features state
   const [zoomLevel, setZoomLevel] = useState(1);
-  const [viewPosition, setViewPosition] = useState({ x: 0, y: 0 });
-  const [isDragging, setIsDragging] = useState(false);
   const [showMiniMap, setShowMiniMap] = useState(true);
   const [selectedNode, setSelectedNode] = useState(null);
   const [nodeFocus, setNodeFocus] = useState(null);
@@ -99,8 +97,7 @@ const MindMapProvider = ({ children }) => {
   const mindMapRef = useRef(null);
   const searchInputRef = useRef(null);
   const searchDebounceRef = useRef(null);
-  const dragStartRef = useRef(null);
-  const viewStartRef = useRef(null);
+
 
   // Initialize root node ID
   useEffect(() => {
@@ -218,9 +215,7 @@ const MindMapProvider = ({ children }) => {
         setZoomLevel(previousState.zoomLevel);
       }
 
-      if (previousState.viewPosition !== undefined) {
-        setViewPosition(previousState.viewPosition);
-      }
+
     }
   }, [history, historyIndex, filterData]);
 
@@ -241,9 +236,7 @@ const MindMapProvider = ({ children }) => {
         setZoomLevel(nextState.zoomLevel);
       }
 
-      if (nextState.viewPosition !== undefined) {
-        setViewPosition(nextState.viewPosition);
-      }
+
     }
   }, [history, historyIndex, filterData]);
 
@@ -286,43 +279,14 @@ const MindMapProvider = ({ children }) => {
       // Adjust view position to zoom toward cursor
       if (centerX !== undefined && centerY !== undefined) {
         const zoomFactor = newZoom / prevZoom;
-        setViewPosition((prev) => ({
-          x: centerX - (centerX - prev.x) * zoomFactor,
-          y: centerY - (centerY - prev.y) * zoomFactor,
-        }));
       }
 
       return newZoom;
     });
   }, []);
 
-  // Pan controls
-  const handlePanStart = useCallback((e) => {
-    setIsDragging(true);
-    dragStartRef.current = { x: e.clientX, y: e.clientY };
-    viewStartRef.current = { ...viewPosition };
-  }, [viewPosition]);
 
-  const handlePanMove = useCallback(
-    (e) => {
-      if (!isDragging) return;
 
-      const dx = e.clientX - dragStartRef.current.x;
-      const dy = e.clientY - dragStartRef.current.y;
-
-      setViewPosition({
-        x: viewStartRef.current.x + dx,
-        y: viewStartRef.current.y + dy,
-      });
-    },
-    [isDragging]
-  );
-
-  const handlePanEnd = useCallback(() => {
-    setIsDragging(false);
-    dragStartRef.current = null;
-    viewStartRef.current = null;
-  }, []);
 
   // Export functionality
   const exportMindMap = useCallback(() => {
@@ -409,17 +373,14 @@ const MindMapProvider = ({ children }) => {
       searchTerm,
       expandedNodes: Array.from(expandedNodes),
       zoomLevel,
-      viewPosition,
     });
-
+  
     setSearchTerm('');
     setFilteredData(mindMapData);
     setExpandedNodes(new Set([ROOT_NODE_ID]));
     setZoomLevel(1);
-    setViewPosition({ x: 0, y: 0 });
     setNodeFocus(null);
-  }, [addToHistory, expandedNodes, searchTerm, mindMapData, zoomLevel, viewPosition]);
-
+  }, [addToHistory, expandedNodes, searchTerm, mindMapData, zoomLevel]);
   // Analytics and metrics
   const getNodeMetrics = useCallback(() => {
     let totalNodes = 0;
@@ -574,49 +535,44 @@ const MindMapProvider = ({ children }) => {
       filterData,
       expandedNodes,
       toggleNode,
-
+  
       // Refs
       searchInputRef,
       mindMapRef,
-
+  
       // View controls
       zoomLevel,
-      viewPosition,
       handleZoom,
-      handlePanStart,
-      handlePanMove,
-      handlePanEnd,
-      isDragging,
-
+  
       // Node focus
       selectedNode,
       setSelectedNode,
       nodeFocus,
       focusNode,
-
+  
       // Mini-map
       showMiniMap,
       setShowMiniMap,
-
+  
       // Export and sharing
       exportMindMap,
       takeScreenshot,
       shareMindMap,
-
+  
       // History
       canUndo: historyIndex > 0,
       canRedo: historyIndex < history.length - 1,
       undo,
       redo,
-
+  
       // View management
       collapseAll,
       expandAll,
       resetView,
-
+  
       // Metrics
       getNodeMetrics,
-
+  
       // Original data
       mindMapData,
     }),
@@ -626,12 +582,7 @@ const MindMapProvider = ({ children }) => {
       expandedNodes,
       toggleNode,
       zoomLevel,
-      viewPosition,
       handleZoom,
-      handlePanStart,
-      handlePanMove,
-      handlePanEnd,
-      isDragging,
       selectedNode,
       nodeFocus,
       showMiniMap,
@@ -653,7 +604,6 @@ const MindMapProvider = ({ children }) => {
       setSelectedNode,
     ]
   );
-
   return (
     <MindMapContext.Provider value={contextValue}>
       {children}

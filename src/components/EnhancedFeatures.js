@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useMindMap } from '../context/MindMapContext';
 
-export const MiniMap = ({ data, zoomLevel, viewPosition }) => {
+export const MiniMap = ({ data, zoomLevel }) => {
   const miniMapRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const [mapScale, setMapScale] = useState(0.1);
@@ -88,8 +88,7 @@ export const MiniMap = ({ data, zoomLevel, viewPosition }) => {
           </g>
 
           <rect
-            x={-viewPosition.x * mapScale}
-            y={-viewPosition.y * mapScale}
+
             width={window.innerWidth * mapScale / zoomLevel}
             height={window.innerHeight * mapScale / zoomLevel}
             className="fill-none stroke-blue-500 stroke-2"

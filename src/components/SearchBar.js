@@ -1,8 +1,8 @@
+// src/components/SearchBar.js
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, ChevronUp, ChevronDown } from 'lucide-react';
+import { Search, X } from 'lucide-react';
 import { useMindMap } from '../context/MindMapContext';
-import * as Command from '@radix-ui/react-command';
 import debounce from 'lodash.debounce';
 
 const SearchBar = () => {
@@ -11,7 +11,7 @@ const SearchBar = () => {
     setSearchTerm,
     filterData,
     focusNode,
-    searchResults,
+    searchResults = [], // Provide default empty array
     setSearchResults
   } = useMindMap();
 
@@ -61,7 +61,7 @@ const SearchBar = () => {
   };
 
   const handleKeyNavigation = (e) => {
-    if (!searchResults.length) return;
+    if (!searchResults?.length) return;
 
     if (e.key === 'ArrowDown') {
       e.preventDefault();
@@ -75,7 +75,9 @@ const SearchBar = () => {
     }
     else if (e.key === 'Enter') {
       e.preventDefault();
-      handleResultClick(searchResults[selectedIndex].item.id);
+      if (searchResults[selectedIndex]) {
+        handleResultClick(searchResults[selectedIndex].item.id);
+      }
     }
   };
 
@@ -110,7 +112,7 @@ const SearchBar = () => {
       </div>
 
       <AnimatePresence>
-        {isOpen && searchResults.length > 0 && (
+        {isOpen && searchResults?.length > 0 && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -119,11 +121,11 @@ const SearchBar = () => {
                        rounded-lg shadow-lg border border-gray-200 
                        dark:border-gray-700 max-h-96 overflow-y-auto"
           >
-            <Command.List className="p-2">
+            <div className="p-2">
               {searchResults.map((result, index) => (
-                <Command.Item
+                <div
                   key={result.item.id}
-                  onSelect={() => handleResultClick(result.item.id)}
+                  onClick={() => handleResultClick(result.item.id)}
                   className={`
                     flex items-center px-4 py-2 rounded-md text-sm
                     ${index === selectedIndex
@@ -135,7 +137,7 @@ const SearchBar = () => {
                 >
                   <div className="flex-1">
                     <div className="font-medium">{result.item.name}</div>
-                    {result.item.path.length > 1 && (
+                    {result.item.path?.length > 1 && (
                       <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                         {result.item.path.slice(0, -1).join(' > ')}
                       </div>
@@ -143,11 +145,24 @@ const SearchBar = () => {
                   </div>
                   <div className="flex items-center gap-2 text-xs text-gray-400">
                     <span>Jump to</span>
-                    <ChevronRight className="w-4 h-4" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="w-4 h-4"
+                    >
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
                   </div>
-                </Command.Item>
+                </div>
               ))}
-            </Command.List>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
